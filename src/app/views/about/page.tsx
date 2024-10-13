@@ -1,5 +1,5 @@
 import Image from "next/image";
-import construccionImg from "../../../../public/assets/img/Ney0023 (1).png";
+import construccionImg from "/public/assets/img/Ney0023.png";
 
 export default function AboutPage() {
   return (
