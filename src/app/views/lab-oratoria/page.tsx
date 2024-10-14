@@ -26,7 +26,7 @@ export default function LandingPage() {
           <div className="flex items-center justify-center space-x-2">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-letras flex items-center">
               LAB Orator
-              <span className="text-rojo ml-2 inline-flex">
+              <span className="text-rojo -ml-1 -mr-1 inline-flex">
                 <IoMicOutline />
               </span>
               a
@@ -116,8 +116,8 @@ export default function LandingPage() {
         <div className="flex flex-col items-center">
           <Image
             className="rounded-lg"
-            src="/assets/img/oradora.jpg"
-            alt="Oradora"
+            src="/assets/img/orador.jpg"
+            alt="Orador"
             width={500}
             height={500}
           />
