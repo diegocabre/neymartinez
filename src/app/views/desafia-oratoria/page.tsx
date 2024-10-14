@@ -1,5 +1,4 @@
 import Image from "next/image";
-import construccionImg from "/public/assets/img/Ney0023.png"; // Asegúrate de que la ruta de la imagen sea correcta
 
 export default function DesafiaOratoriaPage() {
   return (
@@ -12,7 +11,7 @@ export default function DesafiaOratoriaPage() {
       </p>
       <div className="relative w-80 h-80">
         <Image
-          src={construccionImg}
+          src="/assets/img/Ney0023.png"
           alt="Página en construcción"
           layout="fill"
           objectFit="cover"

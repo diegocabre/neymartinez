@@ -1,5 +1,4 @@
 import Image from "next/image";
-import portada from "/public/assets/img/portada.png";
 //import fondo from "/public/assets/img/fondo2.jpg";
 
 export const metadata = {
@@ -24,7 +23,7 @@ export default function HomePage() {
       <div className="flex-shrink-0 w-full md:w-1/2 h-64 md:h-auto md:min-h-screen relative z-10 flex items-center justify-center">
         <Image
           className="animate__animated animate__fadeInDown animate__delay-2s"
-          src={portada} // Usar la imagen estática
+          src="/assets/img/portada.png" // Usar la imagen estática
           alt="Portada"
           width={800} // Ajuste explícito de ancho
           height={600} // Ajuste explícito de altura

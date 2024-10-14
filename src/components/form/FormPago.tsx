@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import contacto from "/public/assets/img/IMG_0741.jpg";
 import {
   IoCardOutline,
   IoIdCardOutline,
@@ -142,7 +141,7 @@ export const FormPago = () => {
         <div className="relative h-64 w-full sm:h-96 lg:h-full lg:w-1/2">
           <Image
             alt="Imagen de contacto"
-            src={contacto}
+            src="/assets/img/IMG_0741.jpg"
             className="absolute inset-0 h-full w-full object-cover object-center"
             width={1000}
             height={1000}

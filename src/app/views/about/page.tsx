@@ -1,5 +1,4 @@
 import Image from "next/image";
-import construccionImg from "/public/assets/img/Ney0023.png";
 
 export default function AboutPage() {
   return (
@@ -12,7 +11,7 @@ export default function AboutPage() {
       </p>
       <div className="relative w-80 h-80">
         <Image
-          src={construccionImg}
+          src="/assets/img/Ney0023.png"
           alt="Página en construcción"
           layout="fill"
           objectFit="cover"

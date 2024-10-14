@@ -1,11 +1,5 @@
 import "animate.css";
 import Image from "next/image";
-import oratoria from "/public/assets/img/oratoria3.jpg";
-import oratoria1 from "/public/assets/img/oratoria1.jpg";
-import oratoria2 from "/public/assets/img/oratoria2.jpg";
-import oratoria3 from "/public/assets/img/oratoria.jpg";
-import conferencia from "/public/assets/img/conferencia.jpg";
-import oradora from "/public/assets/img/oradora.jpg";
 import { IoMicOutline } from "react-icons/io5";
 import { FormPago } from "@/components";
 
@@ -41,7 +35,7 @@ export default function LandingPage() {
           <div className="flex items-center justify-center mt-6 lg:mt-0 lg:ml-10">
             <Image
               className="animate__animated animate__fadeInDown rounded-lg"
-              src={oratoria}
+              src="/assets/img/oratoria3.jpg"
               alt="Oratoria"
               width={500}
               height={500}
@@ -63,7 +57,7 @@ export default function LandingPage() {
           <div className="flex items-center justify-center mb-4 sm:mb-0">
             <Image
               className="rounded-lg"
-              src={oratoria1}
+              src="/assets/img/oratoria1.jpg"
               alt="Oratoria 1"
               width={400}
               height={400}
@@ -72,7 +66,7 @@ export default function LandingPage() {
           <div className="flex items-center justify-center mb-4 sm:mb-0">
             <Image
               className="rounded-lg"
-              src={oratoria2}
+              src="/assets/img/oratoria2.jpg"
               alt="Oratoria 2"
               width={500}
               height={500}
@@ -81,7 +75,7 @@ export default function LandingPage() {
           <div className="flex items-center justify-center">
             <Image
               className="rounded-lg"
-              src={oratoria3}
+              src="/assets/img/oratoria.jpg"
               alt="Oratoria 3"
               width={400}
               height={400}
@@ -109,7 +103,7 @@ export default function LandingPage() {
         <div className="flex justify-center lg:w-1/2 mt-10 lg:mt-0">
           <Image
             className="rounded-lg"
-            src={conferencia}
+            src="/assets/img/conferencia.jpg"
             alt="Conferencia"
             width={500}
             height={500}
@@ -122,7 +116,7 @@ export default function LandingPage() {
         <div className="flex flex-col items-center">
           <Image
             className="rounded-lg"
-            src={oradora}
+            src="/assets/img/oradora.jpg"
             alt="Oradora"
             width={500}
             height={500}

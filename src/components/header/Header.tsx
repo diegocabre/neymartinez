@@ -3,8 +3,6 @@ import "animate.css";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import logo from "/public/assets/img/logo.png";
-import logo2 from "/public/assets/img/logo1.png";
 
 export const Header = () => {
   const [isLabOratoria, setIsLabOratoria] = useState<boolean>(false);
@@ -48,12 +46,16 @@ export const Header = () => {
               <Link href="/">
                 <Image
                   className="rounded p-3 animate__animated animate__fadeInDown animate__delay-1s"
-                  src={isLabOratoria ? logo2 : logo} // Cambiar logo basado en el estado
+                  src={
+                    isLabOratoria
+                      ? "/assets/img/logo1.png" // Ruta relativa al logo2
+                      : "/assets/img/logo.png" // Ruta relativa al logo
+                  }
                   alt="Oratoria"
                   width={0}
                   height={0}
                   sizes="100vw"
-                  style={{ width: "auto", height: "100px" }} // Ajuste responsive del logo (más grande)
+                  style={{ width: "auto", height: "100px" }} // Ajuste responsive del logo
                 />
               </Link>
             </div>
