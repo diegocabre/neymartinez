@@ -88,10 +88,10 @@ export default function LandingPage() {
       <section className="flex flex-col lg:flex-row items-center pt-10 mb-10 lg:mb-40 px-5 lg:px-20 animate__animated animate__fadeInDown animate__delay-1s">
         {/* Texto y Lista */}
         <div className="flex flex-col lg:w-1/2 items-start text-left lg:mr-10">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-letras mb-5">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-letras mb-6">
             Hablaste y te quedaste con:
           </h2>
-          <ul className="text-2xl sm:text-3xl lg:text-4xl font-bold text-amarillo list-disc list-inside">
+          <ul className="text-xl sm:text-2xl lg:text-3xl font-medium text-amarillo list-disc list-inside">
             <li>Lo que no pude decir.</li>
             <li>Lo que debí decir.</li>
             <li>Lo que no dije.</li>
@@ -121,10 +121,10 @@ export default function LandingPage() {
             width={500}
             height={500}
           />
-          <h2 className="mt-10 text-3xl sm:text-4xl lg:text-5xl font-bold text-letras">
+          <h2 className="mt-10 text-4xl sm:text-5xl lg:text-6xl font-bold text-letras">
             Tienes una presentación:
           </h2>
-          <ul className="text-2xl sm:text-3xl lg:text-4xl font-bold text-amarillo list-disc list-inside">
+          <ul className="mt-6 text-xl sm:text-2xl lg:text-3xl font-medium text-amarillo list-disc list-inside">
             <li>Te asustas.</li>
             <li>Te bloqueas y te quedas en blanco.</li>
             <li>No te gusta tu forma de hablar.</li>
@@ -140,7 +140,7 @@ export default function LandingPage() {
           sucede en una reunión, presentación, en casa, en grupos, en redes
           sociales.
         </h3>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-amarillo mt-5 text-center">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium text-amarillo mt-5 text-center">
           y requiere preparación
         </h2>
       </section>

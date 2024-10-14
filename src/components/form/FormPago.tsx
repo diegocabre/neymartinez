@@ -53,13 +53,32 @@ export const FormPago = () => {
         {/* Sección de Formulario */}
         <div className="w-full lg:w-1/2 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-lg text-center lg:text-left">
-            <h2 className="text-2xl text-amarillo font-bold sm:text-3xl lg:text-4xl">
-              ¿Cómo es la modalidad? Practicas virtuales primer y segundo lunes
-              de cada mes, <br />
-              <br /> Experimentos de comunicación, <br />
-              <br /> Un pago de 20$ por acceso durante 6 meses
+            <h2 className="text-2xl text-amarillo font-medium sm:text-3xl lg:text-4xl">
+              ¿Cómo es la modalidad?
+              <br />
+              <br />
+              Prácticas virtuales primer y segundo lunes de cada mes,
+              <br />
+              <br />
+              Experimentos de comunicación,
+              <br />
+              <br />
+              Un pago de{" "}
+              <span
+                className="font-medium text-green-500"
+                style={{ textShadow: "3px 3px 10px white" }}
+              >
+                20$
+              </span>{" "}
+              por acceso durante{" "}
+              <span
+                className="font-medium text-green-500"
+                style={{ textShadow: "3px 3px 10px white" }}
+              >
+                6 meses
+              </span>
             </h2>
-            <p className="mt-4 text-letras text-sm sm:text-base lg:text-lg">
+            <p className="mt-6 text-letras text-sm sm:text-base lg:text-lg">
               Llena el formulario y obtendrás los links de pago.
             </p>
           </div>
