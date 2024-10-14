@@ -1,5 +1,5 @@
 import Image from "next/image";
-import construccionImg from "../../../../public/assets/img/Ney0023.png"; // Asegúrate de que la ruta de la imagen sea correcta
+import construccionImg from "/public/assets/img/Ney0023.png"; // Asegúrate de que la ruta de la imagen sea correcta
 
 export default function DesafiaOratoriaPage() {
   return (

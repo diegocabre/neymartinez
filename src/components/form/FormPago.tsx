@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import contacto from "../../../public/assets/img/IMG_0741.jpg";
+import contacto from "/public/assets/img/IMG_0741.jpg";
 import {
   IoCardOutline,
   IoIdCardOutline,

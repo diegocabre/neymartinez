@@ -1,5 +1,5 @@
 import Image from "next/image";
-import portada from "../../../../public/assets/img/portada.png";
+import portada from "/public/assets/img/portada.png";
 //import fondo from "/public/assets/img/fondo2.jpg";
 
 export const metadata = {

@@ -3,8 +3,8 @@ import "animate.css";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import logo from "../../../public/assets/img/logo.png";
-import logo2 from "../../../public/assets/img/logo1.png";
+import logo from "/public/assets/img/logo.png";
+import logo2 from "/public/assets/img/logo1.png";
 
 export const Header = () => {
   const [isLabOratoria, setIsLabOratoria] = useState<boolean>(false);

@@ -1,16 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
   images: {
+    domains: ["github.com"],
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "tailwindui.com", // Permitir imágenes desde tailwindui.com
-        port: "",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com", // Permitir imágenes desde images.unsplash.com
+        hostname: "github.com",
         port: "",
         pathname: "/**",
       },
