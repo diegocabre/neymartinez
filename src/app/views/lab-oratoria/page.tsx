@@ -116,7 +116,7 @@ export default function LandingPage() {
         <div className="flex flex-col items-center">
           <Image
             className="rounded-lg"
-            src="/assets/img/Ney006.png"
+            src="/assets/img/ney008.jpg"
             alt="Oradora"
             width={500}
             height={500}
