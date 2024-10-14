@@ -75,7 +75,7 @@ export default function LandingPage() {
           <div className="flex items-center justify-center">
             <Image
               className="rounded-lg"
-              src="/assets/img/oratoria.jpg"
+              src="/assets/img/oratoria.png"
               alt="Oratoria 3"
               width={400}
               height={400}
@@ -116,7 +116,7 @@ export default function LandingPage() {
         <div className="flex flex-col items-center">
           <Image
             className="rounded-lg"
-            src="/assets/img/orador.jpg"
+            src="/assets/img/oradora.jpg"
             alt="Orador"
             width={500}
             height={500}
