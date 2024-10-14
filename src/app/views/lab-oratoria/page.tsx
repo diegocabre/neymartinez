@@ -1,11 +1,11 @@
 import "animate.css";
 import Image from "next/image";
-import oratoria from "/public/assets/img/oratoria3.jpg";
-import oratoria1 from "/public/assets/img/oratoria1.jpg";
-import oratoria2 from "/public/assets/img/oratoria2.jpg";
-import oratoria3 from "/public/assets/img/oratoria.jpg";
-import conferencia from "/public/assets/img/conferencia.jpg";
-import oradora from "/public/assets/img/oradora.jpg";
+import oratoria from "../../../../public/assets/img/oratoria3.jpg";
+import oratoria1 from "../../../../public/assets/img/oratoria1.jpg";
+import oratoria2 from "../../../../public/assets/img/oratoria2.jpg";
+import oratoria3 from "../../../../public/assets/img/oratoria.jpg";
+import conferencia from "../../../../public/assets/img/conferencia.jpg";
+import oradora from "../../../../public/assets/img/oradora.jpg";
 import { IoMicOutline } from "react-icons/io5";
 import { FormPago } from "@/components";
 
