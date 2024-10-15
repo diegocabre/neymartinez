@@ -25,7 +25,7 @@ export default function LandingPage() {
         <div className="flex flex-col lg:flex-row items-center justify-center mb-10">
           <div className="flex items-center justify-center space-x-2">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-letras flex items-center">
-              LAB Orator
+              LAB_Orator
               <span className="text-rojo -ml-1 -mr-1 inline-flex">
                 <IoMicOutline />
               </span>
@@ -89,22 +89,46 @@ export default function LandingPage() {
         {/* Texto y Lista */}
         <div className="flex flex-col lg:w-1/2 items-start text-left lg:mr-10">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-letras mb-6">
-            Hablaste y te quedaste con:
+            Si sabes:
           </h2>
-          <ul className="text-xl sm:text-2xl lg:text-3xl font-medium text-amarillo list-disc list-inside">
-            <li>Lo que no pude decir.</li>
-            <li>Lo que debí decir.</li>
-            <li>Lo que no dije.</li>
-            <li>Lo que dije de modo incorrecto.</li>
+          <ul className="text-xl sm:text-2xl lg:text-3xl font-medium text-amarillo mb-6">
+            <li>Montar Bicicleta</li>
+            <li>Nadar</li>
+            <li>Conducir</li>
+            <li>Bailar</li>
           </ul>
+          <h3 className="text-xl text-letras lg:text-2xl font-semibold">
+            ¿Cómo lo aprendiste?
+          </h3>
         </div>
 
-        {/* Imagen */}
-        <div className="flex justify-center lg:w-1/2 mt-10 lg:mt-0">
+        {/* 4 Imágenes distribuidas 2x2 */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:w-1/2 mt-10 lg:mt-0">
           <Image
             className="rounded-lg"
-            src="/assets/img/conferencia.jpg"
-            alt="Conferencia"
+            src="/assets/img/bicicleta.jpg"
+            alt="Montar Bicicleta"
+            width={500}
+            height={500}
+          />
+          <Image
+            className="rounded-lg"
+            src="/assets/img/nadar.jpg"
+            alt="Nadar"
+            width={500}
+            height={500}
+          />
+          <Image
+            className="rounded-lg"
+            src="/assets/img/conducir.jpg"
+            alt="Conducir"
+            width={500}
+            height={500}
+          />
+          <Image
+            className="rounded-lg"
+            src="/assets/img/bailar.jpg"
+            alt="Bailar"
             width={500}
             height={500}
           />
@@ -112,38 +136,162 @@ export default function LandingPage() {
       </section>
 
       {/* Quinta Sección */}
-      <section className="flex flex-col pt-10 mb-10 lg:mb-40 px-5 lg:px-20 animate__animated animate__fadeInDown animate__delay-1s">
-        <div className="flex flex-col items-center">
+      <section className="flex flex-col lg:flex-row items-center justify-center pt-10 mb-10 lg:mb-40 px-5 lg:px-20 animate__animated animate__fadeInDown animate__delay-1s">
+        {/* Imagen más grande y centrada */}
+        <div className="flex justify-center lg:w-1/2 lg:mr-10 mb-10 lg:mb-0">
           <Image
             className="rounded-lg"
             src="/assets/img/Ney008.jpg"
             alt="Oradora"
-            width={500}
-            height={500}
+            width={700}
+            height={700}
           />
-          <h2 className="mt-10 text-4xl sm:text-5xl lg:text-6xl font-bold text-letras">
-            Tienes una presentación:
+        </div>
+
+        {/* Texto y Lista */}
+        <div className="flex flex-col items-center lg:items-start lg:w-1/2">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-amarillo mt-6 lg:mt-0">
+            ¡Practicando!
           </h2>
-          <ul className="mt-6 text-xl sm:text-2xl lg:text-3xl font-medium text-amarillo list-disc list-inside">
-            <li>Te asustas.</li>
-            <li>Te bloqueas y te quedas en blanco.</li>
-            <li>No te gusta tu forma de hablar.</li>
-            <li>Evades cualquier oportunidad de exposición.</li>
-          </ul>
+          <p className="mt-6 text-xl sm:text-2xl lg:text-3xl font-medium text-letras text-center lg:text-left">
+            La oratoria se aprende igual, practicando. <br />
+            <br />
+            Solo necesitas un espacio confiable para atreverte, un laboratorio
+            para experimentar!!
+          </p>
         </div>
       </section>
 
       {/* Sexta Sección */}
       <section className="flex flex-col items-center pt-10 mb-10 lg:mb-40 px-5 lg:px-20 animate__animated animate__fadeInDown animate__delay-1s">
-        <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-letras text-center">
-          Una charla memorable e inspiradora no siempre ocurre en un escenario,
-          sucede en una reunión, presentación, en casa, en grupos, en redes
-          sociales.
-        </h3>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium text-amarillo mt-5 text-center">
-          y requiere preparación
+        {/* Título de la sección */}
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-letras mb-10 text-center">
+          Más de una vez hablé y me quedé con:
         </h2>
+
+        {/* Contenedor de texto y imagen */}
+        <div className="flex flex-col lg:flex-row items-center justify-between w-full">
+          {/* Texto y Lista */}
+          <div className="flex flex-col lg:w-1/2 items-start text-left lg:mr-10">
+            <ul className="list-disc list-inside text-xl sm:text-2xl lg:text-3xl font-medium text-amarillo mb-6">
+              <li>Lo que no pude decir</li>
+              <li>Lo que no debí decir</li>
+              <li>Lo que no dije</li>
+              <li>Lo que dije de modo incorrecto</li>
+            </ul>
+
+            <h3 className="text-xl sm:text-2xl font-semibold text-letras">
+              Si te ha pasado, entonces LAB_Oratoria es para ti
+            </h3>
+          </div>
+
+          {/* Imagen */}
+          <div className="flex justify-center lg:w-1/2 mt-10 lg:mt-0">
+            <Image
+              className="rounded-lg object-cover"
+              src="/assets/img/conferencia.jpg"
+              alt="Conferencia"
+              width={600}
+              height={600}
+            />
+          </div>
+        </div>
       </section>
+
+      {/* Séptima Sección */}
+      <section className="flex flex-col items-center pt-10 mb-10 lg:mb-40 px-5 lg:px-20 animate__animated animate__fadeInDown animate__delay-1s">
+        {/* Título de la sección */}
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-letras mb-10 text-center">
+          Si cuando tienes una presentación:
+        </h2>
+
+        {/* Imagen y contenido */}
+        <div className="flex flex-col items-center lg:space-x-10 lg:flex-row">
+          {/* Imagen */}
+          <div className="flex justify-center mb-10 lg:mb-0 lg:w-1/2">
+            <Image
+              className="rounded-lg object-cover"
+              src="/assets/img/grabando.jpg"
+              alt="Oradora"
+              width={700}
+              height={700}
+            />
+          </div>
+
+          {/* Lista y texto */}
+          <div className="lg:w-1/2">
+            <ul className="list-disc list-inside text-xl sm:text-2xl lg:text-3xl font-medium text-amarillo mb-6 space-y-4">
+              <li>Te asustas más de lo que deberías</li>
+              <li>Criticas tu forma de hablar</li>
+              <li>Evades cualquier oportunidad de exposición</li>
+            </ul>
+            <h3 className="text-xl sm:text-2xl font-semibold text-letras">
+              Si te ha pasado, entonces LAB_Oratoria es para ti
+            </h3>
+          </div>
+        </div>
+      </section>
+
+      {/* Octava Sección */}
+      <section className="flex flex-col items-center pt-10 mb-10 lg:mb-40 px-5 lg:px-20 animate__animated animate__fadeInDown animate__delay-1s">
+        {/* Título de la sección */}
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-letras mb-10 text-center">
+          Tienes redes sociales y una marca personal:
+        </h2>
+
+        {/* Contenedor de texto e imagen */}
+        <div className="flex flex-col lg:flex-row items-center w-full lg:space-x-10">
+          {/* Texto y Lista */}
+          <div className="lg:w-1/2 mb-10 lg:mb-0">
+            <ul className="list-disc list-inside text-xl sm:text-2xl lg:text-3xl font-medium text-amarillo mb-6 space-y-4">
+              <li>No te atreves a grabar un video y publicarlo</li>
+              <li>Te cuesta subir historias expresándote</li>
+            </ul>
+            <h3 className="text-xl sm:text-2xl font-semibold text-letras">
+              Si te ha pasado, entonces LAB_Oratoria es para ti
+            </h3>
+          </div>
+
+          {/* Imagen */}
+          <div className="lg:w-1/2 flex justify-center">
+            <Image
+              className="rounded-lg object-cover"
+              src="/assets/img/conferencia.jpg"
+              alt="Conferencia"
+              width={700}
+              height={700}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Novena Sección */}
+      <section className="flex flex-col pt-10 mb-10 lg:mb-40 px-5 lg:px-20 animate__animated animate__fadeInDown animate__delay-1s">
+        {/* Título principal */}
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-letras mb-8">
+          EL LABORATORIO DE ORATORIA
+        </h2>
+
+        {/* Subtítulo */}
+        <h3 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-letras mb-6">
+          Un espacio de confianza para:
+        </h3>
+
+        {/* Lista de elementos */}
+        <ul className="list-disc list-inside text-xl sm:text-2xl lg:text-3xl font-medium text-amarillo space-y-4 mb-6">
+          <li>Prepararte</li>
+          <li>Exponerte</li>
+          <li>Aprender</li>
+          <li>Practicar, practicar y practicar</li>
+        </ul>
+
+        {/* Texto final */}
+        <p className="text-xl sm:text-2xl lg:text-3xl font-medium text-letras text-center">
+          Para desarrollar tu propia manera de comunicar con naturalidad y
+          autenticidad
+        </p>
+      </section>
+
       <section>
         <FormPago />
       </section>

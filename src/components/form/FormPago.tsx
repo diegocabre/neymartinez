@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import {
   IoCardOutline,
+  IoEarthOutline,
   IoIdCardOutline,
   IoPersonCircleOutline,
 } from "react-icons/io5";
@@ -53,33 +54,46 @@ export const FormPago = () => {
         {/* Sección de Formulario */}
         <div className="w-full lg:w-1/2 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-lg text-center lg:text-left">
-            <h2 className="text-2xl text-amarillo font-medium sm:text-3xl lg:text-4xl">
+            <h2 className="text-2xl text-letras font-medium sm:text-3xl lg:text-4xl">
               ¿Cómo es la modalidad?
-              <br />
-              <br />
-              Prácticas virtuales primer y segundo lunes de cada mes,
-              <br />
-              <br />
-              Experimentos de comunicación,
-              <br />
-              <br />
-              Un pago de{" "}
-              <span
-                className="font-medium text-green-500"
-                style={{ textShadow: "3px 3px 10px white" }}
-              >
-                20$
-              </span>{" "}
-              por acceso durante{" "}
-              <span
-                className="font-medium text-green-500"
-                style={{ textShadow: "3px 3px 10px white" }}
-              >
-                6 meses
-              </span>
             </h2>
+
+            {/* Lista con viñetas personalizadas */}
+            <ul className="mt-6 text-amarillo text-xl sm:text-2xl lg:text-3xl list-none">
+              <li className="mb-4 relative pl-10 before:content-['✔️'] before:absolute before:left-0 before:text-amarillo">
+                Prácticas virtuales primer y segundo lunes de cada mes
+              </li>
+              <li className="mb-4 relative pl-10 before:content-['✔️'] before:absolute before:left-0 before:text-amarillo">
+                Experimentos de comunicación
+              </li>
+              <li className="mb-4 relative pl-10 before:content-['✔️'] before:absolute before:left-0 before:text-amarillo">
+                Ejercicios de exposición
+              </li>
+              <li className="mb-4 relative pl-10 before:content-['✔️'] before:absolute before:left-0 before:text-amarillo">
+                Preparación de una charla de 5 minutos
+              </li>
+            </ul>
+
+            <p className="mt-6 text-amarillo text-xl sm:text-2xl lg:text-3xl">
+              Pago único – membresía de 6 meses
+            </p>
+
+            {/* Icono y precio con bandera */}
+            <div className="flex items-center justify-center mt-6 text-amarillo text-xl sm:text-2xl lg:text-3xl">
+              <IoEarthOutline className="h-6 w-6 text-letras" />
+              <span className="mx-2">USD $20</span>
+              <Image
+                src="/assets/img/argentina-flag.png" // Cambia esto por la ruta correcta de la bandera
+                alt="Bandera de Argentina"
+                width={24} // Ancho igual que el icono
+                height={24} // Tamaño igual que el icono
+              />
+              <span className="ml-2">15000 ARS</span>
+            </div>
+
             <p className="mt-6 text-letras text-sm sm:text-base lg:text-lg">
-              Llena el formulario y obtendrás los links de pago.
+              Quieres ser parte de LAB_Oratoria, Completa el formulario para
+              recibir enlaces de pago
             </p>
           </div>
 
