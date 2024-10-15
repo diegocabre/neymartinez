@@ -1,5 +1,4 @@
 import Image from "next/image";
-//import fondo from "/public/assets/img/fondo2.jpg";
 
 export const metadata = {
   title: "Neydemar Martinez",
@@ -9,29 +8,18 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="bg-gradient-custom overflow-hidden relative flex flex-col md:flex-row w-full min-h-screen">
-      {/*     <div className="absolute inset-0">
-        <Image
-          src={fondo} // Usar la imagen de fondo
-          alt="Fondo"
-          layout="fill" // Ajustar la imagen al contenedor
-          objectFit="cover" // Mantener la relación de aspecto
-          className="opacity-50" // Aplicar opacidad a la imagen de fondo
-        />
-      </div> */}
-
-      {/* Contenedor de la imagen */}
+      {/* Image Container */}
       <div className="flex-shrink-0 w-full md:w-1/2 h-64 md:h-auto md:min-h-screen relative z-10 flex items-center justify-center">
         <Image
           className="animate__animated animate__fadeInDown animate__delay-2s"
-          src="/assets/img/portada.png" // Usar la imagen estática
+          src="/assets/img/portada.png"
           alt="Portada"
-          width={800} // Ajuste explícito de ancho
-          height={600} // Ajuste explícito de altura
-          objectFit="contain" // Mantener la relación de aspecto
+          layout="fill"
+          objectFit="contain" // Maintain aspect ratio
+          priority
         />
       </div>
-
-      {/* Contenedor de texto */}
+      {/* Text Container */}
       <div className="flex flex-col items-center justify-center w-full md:w-1/2 h-auto min-h-screen z-10 px-4 md:px-10">
         <div className="text-justify">
           <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold animate__animated animate__fadeInDown animate__delay-2s">
