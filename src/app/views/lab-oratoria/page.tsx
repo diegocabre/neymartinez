@@ -268,7 +268,7 @@ export default function LandingPage() {
       {/* Novena Sección */}
       <section className="flex flex-col pt-10 mb-10 lg:mb-40 px-5 lg:px-20 animate__animated animate__fadeInDown animate__delay-1s">
         {/* Título principal */}
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-letras mb-8">
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-letras mb-8 text-center">
           EL LABORATORIO DE ORATORIA
         </h2>
 

@@ -50,14 +50,13 @@ export const FormPago = () => {
 
   return (
     <div>
-      <section className="relative flex flex-col lg:flex-row lg:h-screen lg:items-center pt-10 lg:pt-20">
+      <section className="relative flex flex-col mb-10 lg:flex-row lg:h-screen lg:items-center pt-10 lg:pt-20">
         {/* Sección de Formulario */}
         <div className="w-full lg:w-1/2 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-lg text-center lg:text-left">
             <h2 className="text-2xl text-letras font-medium sm:text-3xl lg:text-4xl">
               ¿Cómo es la modalidad?
             </h2>
-
             {/* Lista con viñetas personalizadas */}
             <ul className="mt-6 text-amarillo text-xl sm:text-2xl lg:text-3xl list-none">
               <li className="mb-4 relative pl-10 before:content-['✔️'] before:absolute before:left-0 before:text-amarillo">
@@ -91,7 +90,7 @@ export const FormPago = () => {
               <span className="ml-2">15000 ARS</span>
             </div>
 
-            <p className="mt-6 text-letras text-sm sm:text-base lg:text-lg">
+            <p className="mt-6 text-letras text-center text-sm sm:text-base lg:text-lg">
               Quieres ser parte de LAB_Oratoria, Completa el formulario para
               recibir enlaces de pago
             </p>
@@ -171,11 +170,11 @@ export const FormPago = () => {
         </div>
 
         {/* Sección de Imagen */}
-        <div className="relative h-64 w-full sm:h-96 lg:h-full lg:w-1/2">
+        <div className="relative mr-10 h-64 w-full sm:h-96 lg:h-full lg:w-1/2">
           <Image
             alt="Imagen de contacto"
             src="/assets/img/IMG_0741.jpg"
-            className="absolute inset-0 h-full w-full object-cover object-center"
+            className="absolute inset-0 h-full w-full object-cover object-center rounded"
             width={1000}
             height={1000}
             priority
