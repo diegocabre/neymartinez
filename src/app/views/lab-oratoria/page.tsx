@@ -136,6 +136,9 @@ export default function LandingPage() {
       </section>
 
       {/* Quinta Sección */}
+      <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-amarillo mt-6 lg:mt-0 md:block lg:hidden sm:block text-center">
+        ¡Practicando!
+      </h2>
       <section className="flex flex-col lg:flex-row items-center justify-center pt-10 mb-10 lg:mb-40 px-5 lg:px-20 animate__animated animate__fadeInDown animate__delay-1s">
         {/* Imagen más grande y centrada */}
         <div className="flex justify-center lg:w-1/2 lg:mr-10 mb-10 lg:mb-0">
@@ -150,7 +153,7 @@ export default function LandingPage() {
 
         {/* Texto y Lista */}
         <div className="flex flex-col items-center lg:items-start lg:w-1/2">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-amarillo mt-6 lg:mt-0">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-amarillo mt-6 lg:mt-0 md:hidden sm:hidden lg:block">
             ¡Practicando!
           </h2>
           <p className="mt-6 text-xl sm:text-2xl lg:text-3xl font-medium text-letras text-center lg:text-left">
@@ -226,7 +229,7 @@ export default function LandingPage() {
               <li>Evades cualquier oportunidad de exposición</li>
             </ul>
             <h3 className="text-xl sm:text-2xl font-semibold text-letras">
-              Si te ha pasado, entonces LAB_Oratoria es para ti
+              Entonces LAB_Oratoria es para ti
             </h3>
           </div>
         </div>
@@ -248,7 +251,7 @@ export default function LandingPage() {
               <li>Te cuesta subir historias expresándote</li>
             </ul>
             <h3 className="text-xl sm:text-2xl font-semibold text-letras">
-              Si te ha pasado, entonces LAB_Oratoria es para ti
+              Entonces LAB_Oratoria es para ti
             </h3>
           </div>
 
@@ -292,7 +295,7 @@ export default function LandingPage() {
         </p>
       </section>
 
-      <section>
+      <section className="items-center mb-10 lg:mb-40 px-5 lg:px-20 animate__animated animate__fadeInDown animate__delay-1s">
         <FormPago />
       </section>
     </main>

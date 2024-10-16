@@ -18,8 +18,7 @@ const config: Config = {
       },
       backgroundImage: {
         "gradient-custom": "linear-gradient(135deg, #015249 50%, #000000 100%)",
-        "gradient-custom2":
-          "linear-gradient(135deg, #e5d8f6 50%, #000000 100%)",
+        "gradient-custom2":"linear-gradient(135deg, #e5d8f6 20%, #000000 100%)",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

@@ -50,9 +50,9 @@ export const FormPago = () => {
 
   return (
     <div>
-      <section className="relative flex flex-col mb-10 lg:flex-row lg:h-screen lg:items-center pt-10 lg:pt-20">
+      <section className="relative flex flex-col lg:flex-row lg:items-center lg:justify-between pt-10 lg:pt-20">
         {/* Sección de Formulario */}
-        <div className="w-full lg:w-1/2 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
+        <div className="w-full lg:w-3/5 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-lg text-center lg:text-left">
             <h2 className="text-2xl text-letras font-medium sm:text-3xl lg:text-4xl">
               ¿Cómo es la modalidad?
@@ -78,19 +78,19 @@ export const FormPago = () => {
             </p>
 
             {/* Icono y precio con bandera */}
-            <div className="flex items-center justify-center mt-6 text-amarillo text-xl sm:text-2xl lg:text-3xl">
+            <div className="flex items-center justify-center lg:justify-start mt-6 text-amarillo text-xl sm:text-2xl lg:text-3xl">
               <IoEarthOutline className="h-6 w-6 text-letras" />
               <span className="mx-2">USD $20</span>
               <Image
-                src="/assets/img/argentina-flag.png" // Cambia esto por la ruta correcta de la bandera
+                src="/assets/img/argentina-flag.png"
                 alt="Bandera de Argentina"
-                width={24} // Ancho igual que el icono
-                height={24} // Tamaño igual que el icono
+                width={24}
+                height={24}
               />
               <span className="ml-2">15000 ARS</span>
             </div>
 
-            <p className="mt-6 text-letras text-center text-sm sm:text-base lg:text-lg">
+            <p className="mt-6 text-letras text-center text-sm sm:text-base lg:text-lg lg:text-left">
               Quieres ser parte de LAB_Oratoria, Completa el formulario para
               recibir enlaces de pago
             </p>
@@ -170,7 +170,7 @@ export const FormPago = () => {
         </div>
 
         {/* Sección de Imagen */}
-        <div className="relative mr-10 h-64 w-full sm:h-96 lg:h-full lg:w-1/2">
+        <div className="relative w-full h-64 sm:h-96 lg:h-auto lg:w-1/2">
           <Image
             alt="Imagen de contacto"
             src="/assets/img/IMG_0741.jpg"

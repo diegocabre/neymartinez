@@ -8,7 +8,7 @@ export const Header = () => {
   const [isLabOratoria, setIsLabOratoria] = useState<boolean>(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  // Verifica que el código que depende de localStorage se ejecute solo en el lado del cliente
+  // Verifica el estado de isLabOratoria en localStorage
   useEffect(() => {
     if (typeof window !== "undefined") {
       const savedState = localStorage.getItem("isLabOratoria");
@@ -16,6 +16,7 @@ export const Header = () => {
     }
   }, []);
 
+  // Guarda el estado de isLabOratoria en localStorage
   useEffect(() => {
     if (typeof window !== "undefined") {
       localStorage.setItem("isLabOratoria", JSON.stringify(isLabOratoria));
@@ -26,7 +27,7 @@ export const Header = () => {
     setIsLabOratoria(true);
   };
 
-  const handleOtherLinkClick = () => {
+  const handleLogoClick = () => {
     setIsLabOratoria(false);
   };
 
@@ -45,48 +46,47 @@ export const Header = () => {
             <div className="flex-shrink-0">
               <Link href="/">
                 <Image
+                  onClick={handleLogoClick}
                   className="rounded p-3 animate__animated animate__fadeInDown animate__delay-1s"
                   src={
                     isLabOratoria
-                      ? "/assets/img/logo1.png" // Ruta relativa al logo2
-                      : "/assets/img/logo.png" // Ruta relativa al logo
+                      ? "/assets/img/logo1.png" // Logo de LAB_oratoria
+                      : "/assets/img/logo.png" // Logo original
                   }
                   alt="Oratoria"
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                  style={{ width: "auto", height: "100px" }} // Ajuste responsive del logo
+                  width={120} // Ancho fijo para ambos logos
+                  height={120} // Alto fijo para ambos logos
                 />
               </Link>
             </div>
           </div>
 
-          {/* Menú normal visible en pantallas medianas (md) o más grandes */}
+          {/* Menú en pantallas md o más grandes */}
           <div className="hidden md:flex items-center space-x-4">
             <Link
               href="/views/about"
-              onClick={handleOtherLinkClick}
+              onClick={handleLogoClick}
               className={`hover:bg-gray-700 hover:text-letras px-3 py-2 rounded-md text-lg font-medium ${
                 isLabOratoria ? "text-letras" : "text-letras"
-              }`}
+              } md:text-sm`} // Reducir fuente en pantallas md
             >
               Sobre Ney
             </Link>
             <Link
               href="https://link.chtbl.com/Oratoria_VIP"
-              onClick={handleOtherLinkClick}
+              onClick={handleLogoClick}
               className={`hover:bg-gray-700 hover:text-letras px-3 py-2 rounded-md text-lg font-medium ${
                 isLabOratoria ? "text-letras" : "text-letras"
-              }`}
+              } md:text-sm`} // Reducir fuente en pantallas md
             >
               Podcast
             </Link>
             <Link
               href="/views/desafia-oratoria"
-              onClick={handleOtherLinkClick}
+              onClick={handleLogoClick}
               className={`hover:bg-gray-700 hover:text-letras px-3 py-2 rounded-md text-lg font-medium ${
                 isLabOratoria ? "text-letras" : "text-letras"
-              }`}
+              } md:text-sm`} // Reducir fuente en pantallas md
             >
               Desafia tu Oratoria
             </Link>
@@ -95,13 +95,13 @@ export const Header = () => {
               onClick={handleLabOratoriaClick}
               className={`hover:bg-gray-700 hover:text-letras px-3 py-2 rounded-md text-lg font-medium ${
                 isLabOratoria ? "text-letras" : "text-letras"
-              }`}
+              } md:text-sm`} // Reducir fuente en pantallas md
             >
               LAB_oratoria
             </Link>
           </div>
 
-          {/* Botón de menú hamburguesa visible solo en sm */}
+          {/* Botón de menú hamburguesa en pantallas pequeñas */}
           <div className="block md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -126,27 +126,27 @@ export const Header = () => {
           </div>
         </div>
 
-        {/* Menú desplegable para pantallas pequeñas (sm) */}
+        {/* Menú desplegable para pantallas pequeñas */}
         {isOpen && (
           <div className="md:hidden bg-gray-900">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <Link
                 href="/views/about"
-                onClick={handleOtherLinkClick}
+                onClick={handleLogoClick}
                 className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
               >
                 Sobre Ney
               </Link>
               <Link
                 href="https://link.chtbl.com/Oratoria_VIP"
-                onClick={handleOtherLinkClick}
+                onClick={handleLogoClick}
                 className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
               >
                 Podcast
               </Link>
               <Link
                 href="/views/desafia-oratoria"
-                onClick={handleOtherLinkClick}
+                onClick={handleLogoClick}
                 className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
               >
                 Desafia tu Oratoria
