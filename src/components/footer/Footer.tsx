@@ -4,7 +4,7 @@ import { IoLogoInstagram, IoLogoLinkedin } from "react-icons/io5";
 export const Footer = () => {
   return (
     <footer className="bg-gradient-custom text-white py-10">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
         {/* Información del sitio */}
         <div className="text-center md:text-left">
           <h4 className="text-2xl font-bold">Oratoria VIP</h4>
