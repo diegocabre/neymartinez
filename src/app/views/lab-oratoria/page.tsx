@@ -136,9 +136,11 @@ export default function LandingPage() {
       </section>
 
       {/* Quinta Sección */}
-      <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-amarillo mt-6 lg:mt-0 md:block lg:hidden sm:block text-center">
+      {/* H2 visible solo en pantallas pequeñas y medianas */}
+      <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-amarillo mt-6 lg:mt-0 block md:block lg:hidden text-center">
         ¡Practicando!
       </h2>
+
       <section className="flex flex-col lg:flex-row items-center justify-center pt-10 mb-10 lg:mb-40 px-5 lg:px-20 animate__animated animate__fadeInDown animate__delay-1s">
         {/* Imagen más grande y centrada */}
         <div className="flex justify-center lg:w-1/2 lg:mr-10 mb-10 lg:mb-0">
@@ -153,7 +155,8 @@ export default function LandingPage() {
 
         {/* Texto y Lista */}
         <div className="flex flex-col items-center lg:items-start lg:w-1/2">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-amarillo mt-6 lg:mt-0 md:hidden sm:hidden lg:block">
+          {/* H2 visible solo en pantallas grandes */}
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-amarillo mt-6 lg:mt-0 hidden md:hidden sm:hidden lg:block">
             ¡Practicando!
           </h2>
           <p className="mt-6 text-xl sm:text-2xl lg:text-3xl font-medium text-letras text-center lg:text-left">

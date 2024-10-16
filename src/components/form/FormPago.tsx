@@ -174,7 +174,7 @@ export const FormPago = () => {
           <Image
             alt="Imagen de contacto"
             src="/assets/img/IMG_0741.jpg"
-            className="absolute inset-0 h-full w-full object-cover object-center rounded"
+            className="inset-0 h-full w-full object-cover object-center rounded"
             width={1000}
             height={1000}
             priority
