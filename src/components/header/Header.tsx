@@ -78,6 +78,7 @@ export const Header = () => {
               className={`hover:bg-gray-700 hover:text-letras px-3 py-2 rounded-md text-lg font-medium ${
                 isLabOratoria ? "text-letras" : "text-letras"
               } md:text-sm`} // Reducir fuente en pantallas md
+              target="_blank"
             >
               Podcast
             </Link>

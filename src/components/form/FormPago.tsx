@@ -50,7 +50,7 @@ export const FormPago = () => {
 
   return (
     <div>
-      <section className="relative flex flex-col lg:flex-row lg:items-center lg:justify-between pt-10 lg:pt-20">
+      <section className="relative flex flex-col lg:flex-row lg:items-center lg:justify-between">
         {/* Sección de Formulario */}
         <div className="w-full lg:w-3/5 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-lg text-center lg:text-left">
