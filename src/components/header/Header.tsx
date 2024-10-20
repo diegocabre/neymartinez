@@ -63,7 +63,7 @@ export const Header = () => {
 
           {/* Menú en pantallas md o más grandes */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link
+            {/*             <Link
               href="/views/about"
               onClick={handleLogoClick}
               className={`hover:bg-gray-700 hover:text-letras px-3 py-2 rounded-md text-lg font-medium ${
@@ -71,7 +71,7 @@ export const Header = () => {
               } md:text-sm`} // Reducir fuente en pantallas md
             >
               Sobre Ney
-            </Link>
+            </Link> */}
             <Link
               href="https://link.chtbl.com/Oratoria_VIP"
               onClick={handleLogoClick}
@@ -82,7 +82,7 @@ export const Header = () => {
             >
               Podcast
             </Link>
-            <Link
+            {/*             <Link
               href="/views/desafia-oratoria"
               onClick={handleLogoClick}
               className={`hover:bg-gray-700 hover:text-letras px-3 py-2 rounded-md text-lg font-medium ${
@@ -90,7 +90,7 @@ export const Header = () => {
               } md:text-sm`} // Reducir fuente en pantallas md
             >
               Desafia tu Oratoria
-            </Link>
+            </Link> */}
             <Link
               href="/views/lab-oratoria"
               onClick={handleLabOratoriaClick}

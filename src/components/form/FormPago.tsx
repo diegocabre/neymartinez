@@ -49,7 +49,10 @@ export const FormPago = () => {
   };
 
   return (
-    <div>
+    <>
+      <h2 className="flex justify-center text-5xl font-bold text-letras text-center animate-pulse">
+        EMPEZAMOS EL 4 DE NOVIEMBRE 2024
+      </h2>
       <section className="relative flex flex-col lg:flex-row lg:items-center lg:justify-between">
         {/* Sección de Formulario */}
         <div className="w-full lg:w-3/5 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
@@ -181,6 +184,6 @@ export const FormPago = () => {
           />
         </div>
       </section>
-    </div>
+    </>
   );
 };
