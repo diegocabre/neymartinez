@@ -5,7 +5,7 @@ import Image from "next/image";
 import {
   IoCardOutline,
   IoEarthOutline,
-  IoIdCardOutline,
+  //IoIdCardOutline,
   IoPersonCircleOutline,
 } from "react-icons/io5";
 
@@ -83,7 +83,7 @@ export const FormPago = () => {
             </ul>
 
             <p className="mt-6 text-amarillo text-xl sm:text-2xl lg:text-3xl">
-              Pago único – membresía de 6 meses
+              Pago único – membresía de 3 meses
             </p>
 
             {/* Icono y precio con bandera */}
@@ -154,7 +154,7 @@ export const FormPago = () => {
               </span>
             </div>
 
-            <div className="relative mb-5">
+            {/* <div className="relative mb-5">
               <input
                 type="tel"
                 name="telefono"
@@ -167,7 +167,7 @@ export const FormPago = () => {
               <span className="absolute inset-y-0 right-0 grid place-content-center px-4">
                 <IoIdCardOutline className="h-5 w-5 text-fondo" />
               </span>
-            </div>
+            </div> */}
 
             <button
               type="submit"

@@ -5,12 +5,11 @@ interface RequestBody {
   nombre: string;
   apellido: string;
   email: string;
-  telefono: string;
 }
 
 export async function POST(req: Request): Promise<Response> {
   try {
-    const { nombre, apellido, email, telefono }: RequestBody = await req.json();
+    const { nombre, apellido, email }: RequestBody = await req.json();
 
     // Ruta de la imagen
     const imagePath = path.join(
@@ -39,7 +38,6 @@ export async function POST(req: Request): Promise<Response> {
         <p>Nombre: ${nombre}</p>
         <p>Apellido: ${apellido}</p>
         <p>Email: ${email}</p>
-        <p>Teléfono: ${telefono}</p>
       `,
     });
 
