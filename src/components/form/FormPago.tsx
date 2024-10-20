@@ -39,7 +39,13 @@ export const FormPago = () => {
 
       if (res.ok) {
         alert("Formulario enviado exitosamente");
-        // Limpiar formulario si es necesario
+        // Limpiar el formulario
+        setFormData({
+          nombre: "",
+          apellido: "",
+          email: "",
+          telefono: "",
+        });
       } else {
         alert("Hubo un error al enviar el formulario");
       }
@@ -155,7 +161,7 @@ export const FormPago = () => {
                 value={formData.telefono}
                 onChange={handleInputChange}
                 className="w-full rounded-lg border-gray-200 text-fondo p-4 text-sm shadow-sm"
-                placeholder="Introduce tu teléfono con prefijo +52"
+                placeholder="Introduce tu teléfono con prefijo +54"
                 required
               />
               <span className="absolute inset-y-0 right-0 grid place-content-center px-4">
