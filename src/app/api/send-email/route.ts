@@ -26,6 +26,10 @@ export async function POST(req: Request): Promise<Response> {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
+      connectionTimeout: 10000,
+      tls: {
+        rejectUnauthorized: false,
+      },
     });
 
     // Enviar el primer correo al administrador
