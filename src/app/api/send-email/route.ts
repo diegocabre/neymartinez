@@ -26,10 +26,6 @@ export async function POST(req: Request): Promise<Response> {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
-      connectionTimeout: 10000,
-      tls: {
-        rejectUnauthorized: false,
-      },
     });
 
     // Enviar el primer correo al administrador
@@ -78,13 +74,6 @@ export async function POST(req: Request): Promise<Response> {
         <p style="font-size: 18px; text-align: center;">Gracias por elegir nuestra academia.</p>
       </div>
       `,
-      attachments: [
-        {
-          filename: "IMG_0753.jpg",
-          path: imagePath, // Ruta de la imagen
-          cid: "unique@image.cid", // Identificador único para la imagen
-        },
-      ],
     });
 
     // Responder con éxito
