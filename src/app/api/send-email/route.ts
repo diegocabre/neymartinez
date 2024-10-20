@@ -23,7 +23,7 @@ export async function POST(req: Request): Promise<Response> {
       port: 465,
       secure: true,
       auth: {
-        user: "academiaoratoriavip@neymartinez.com",
+        user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
     });
