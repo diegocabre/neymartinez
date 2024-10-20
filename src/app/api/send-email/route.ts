@@ -68,7 +68,7 @@ export async function POST(req: Request): Promise<Response> {
         </ul>
 
         <p style="font-size: 18px;">Una vez realizado el pago, envía el soporte a este enlace:</p>
-        <a href="https://wa.me/5491140983793" style="font-size: 18px; color: #007bff; text-decoration: none;">WhatsApp</a>
+        <a href="https://wa.me/5491140983793?text=Hola%2C%20te%20adjunto%20comprobante%20de%20pago" style="font-size: 18px; color: #007bff; text-decoration: none;">WhatsApp</a>
 
         <img src="cid:unique@image.cid" alt="Imagen" style="max-width: 100%; height: auto; margin-top: 20px;"/>
         <p style="font-size: 18px; text-align: center;">Gracias por elegir nuestra academia.</p>
