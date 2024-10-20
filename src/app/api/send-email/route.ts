@@ -1,5 +1,4 @@
 import nodemailer from "nodemailer";
-import path from "path";
 
 interface RequestBody {
   nombre: string;
@@ -10,12 +9,6 @@ interface RequestBody {
 export async function POST(req: Request): Promise<Response> {
   try {
     const { nombre, apellido, email }: RequestBody = await req.json();
-
-    // Ruta de la imagen
-    const imagePath = path.join(
-      process.cwd(),
-      "public/assets/img/IMG_0753.jpg"
-    );
 
     // Crear el transportador de Nodemailer
     const transporter = nodemailer.createTransport({
