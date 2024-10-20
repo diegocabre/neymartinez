@@ -61,8 +61,20 @@ export async function POST(req: Request): Promise<Response> {
         </ul>
 
         <p style="font-size: 18px;">Una vez realizado el pago, envía el soporte a este enlace:</p>
-        <a href="https://wa.me/5491140983793?text=Hola%2C%20te%20adjunto%20comprobante%20de%20pago" style="font-size: 18px; color: #007bff; text-decoration: none;">WhatsApp</a>
-        
+        <a href="https://wa.me/5491140983793?text=Hola%20ya%20soy%20parte%20de%20LAB_Oratoria%2C%20te%20adjunto%20el%20soporte%20de%20pago" 
+   style="
+      font-size: 18px; 
+      color: #007bff; 
+      text-decoration: none; 
+      transition: transform 0.3s ease, color 0.3s ease;
+      display: inline-block;
+   "
+   onmouseover="this.style.transform='scale(1.1)'; this.style.color='#ff4500';"
+   onmouseout="this.style.transform='scale(1)'; this.style.color='#007bff';">
+   WhatsApp
+</a>
+
+
         <p style="font-size: 18px; text-align: center;">Gracias por elegir nuestra academia.</p>
       </div>
       `,
