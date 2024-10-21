@@ -15,14 +15,25 @@ export const Footer = () => {
 
         {/* Enlaces a redes sociales */}
         <div className="flex items-center justify-center space-x-6">
-          <Link href="https://www.instagram.com/neydemartinez/" target="_blank">
-            <IoLogoInstagram className="text-3xl hover:text-yellow-500 transition-colors duration-300" />
+          <Link
+            href="https://www.instagram.com/neydemartinez/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <IoLogoInstagram
+              className="text-3xl hover:text-yellow-500 transition-colors duration-300"
+              aria-label="Instagram de Ney Martínez"
+            />
           </Link>
           <Link
             href="https://www.linkedin.com/in/neymartinez-oratoriavip/"
             target="_blank"
+            rel="noopener noreferrer"
           >
-            <IoLogoLinkedin className="text-3xl hover:text-yellow-500 transition-colors duration-300" />
+            <IoLogoLinkedin
+              className="text-3xl hover:text-yellow-500 transition-colors duration-300"
+              aria-label="LinkedIn de Ney Martínez"
+            />
           </Link>
         </div>
       </div>
