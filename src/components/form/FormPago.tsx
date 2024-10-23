@@ -70,7 +70,8 @@ export const FormPago = () => {
             {/* Lista con viñetas personalizadas */}
             <ul className="mt-6 text-amarillo text-xl sm:text-2xl lg:text-3xl list-none">
               <li className="mb-4 relative pl-10 before:content-['✔️'] before:absolute before:left-0 before:text-amarillo">
-                Prácticas virtuales primer y segundo lunes de cada mes
+                Prácticas virtuales primer y segundo lunes de cada mes a las 20
+                hrs Arg
               </li>
               <li className="mb-4 relative pl-10 before:content-['✔️'] before:absolute before:left-0 before:text-amarillo">
                 Experimentos de comunicación
