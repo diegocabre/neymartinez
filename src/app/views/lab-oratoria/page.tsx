@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { IoMicOutline } from "react-icons/io5";
-import { FormPago } from "@/components";
+//import { FormPago } from "@/components";
 
 export const metadata = {
   title: "LAB-Oratoria | Ney Martínez",
@@ -341,7 +341,7 @@ export default function LandingPage() {
 
         {/* Sección del Formulario de Pago */}
         <section className="items-center mb-10 lg:mb-40 px-5 lg:px-20 animate__animated animate__fadeInDown animate__delay-1s">
-          <FormPago />
+          {/*<FormPago />*/}
         </section>
       </main>
     </>
