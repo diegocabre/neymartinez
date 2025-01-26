@@ -35,7 +35,7 @@ export default function AboutPage() {
         {/* Texto */}
         <div className="w-full lg:w-1/2 text-center lg:text-left space-y-6">
           <h6 className="text-3xl md:text-5xl lg:text-6xl text-rojo italic font-serif">
-            "Hacer que las cosas sucedan"
+            {`"Hacer que las cosas sucedan"`}
           </h6>
           <p className="text-lg md:text-xl font-medium text-amarillo bg-verdes rounded-md p-4 shadow-md">
             Muchas veces escuché a una líder decir esto mientras desarrollaba mi carrera profesional como Ingeniero Industrial en una empresa internacional en Venezuela. Durante esos 12 años aprendí a definir estrategias, trazar planes, definir metodologías para hacer seguimiento, definir indicadores, medirlos, hacer seguimiento y desafiarlos, todo alineado a un objetivo común.
@@ -50,8 +50,7 @@ export default function AboutPage() {
             Emigrar no estaba en mi tablero de sueños, no era una ruta alternativa, pero fue el camino que tuve que tomar.
             <br />
             <br />
-            Allí entendí que ser líder no tiene que ver con tener personas a cargo o tener un cargo, ser líder es <strong>{`"Hacer que las cosas sucedan"`}</strong>
-            , y eso incluye nuestra propia vida.
+            Allí entendí que ser líder no tiene que ver con tener personas a cargo o tener un cargo, ser líder es <strong>{`"Hacer que las cosas sucedan"`}</strong>, y eso incluye nuestra propia vida.
           </p>
         </div>
         {/* Imagen */}
