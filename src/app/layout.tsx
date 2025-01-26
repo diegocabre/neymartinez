@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={/* openSansFont.className + " " +  */poppinsFont.className}>
+      <body className={openSansFont.className + " " + poppinsFont.className}>
         <NavBar />
         {children}
         <Footer />
