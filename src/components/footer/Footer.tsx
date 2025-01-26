@@ -3,12 +3,12 @@ import { IoLogoInstagram, IoLogoLinkedin } from "react-icons/io5";
 
 export const Footer = () => {
   return (
-    <footer className="bg-gradient-custom text-white py-10">
+    <footer className="bg-gradient-custom2 text-letras py-10 border-t-2 border-letras">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
         {/* Información del sitio */}
         <div className="text-center md:text-left">
           <h4 className="text-2xl font-bold">Oratoria VIP</h4>
-          <p className="text-sm text-gray-400 mt-2">
+          <p className="text-sm text-verdes mt-2">
             &copy; {new Date().getFullYear()} Todos los derechos reservados.
           </p>
         </div>

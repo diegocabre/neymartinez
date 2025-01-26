@@ -2,16 +2,16 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["github.com"],
     remotePatterns: [
       {
         protocol: "https",
         hostname: "github.com",
         port: "",
-        pathname: "/**",
+        pathname: "/**", // Permite todas las rutas bajo github.com
       },
     ],
   },
 };
 
 export default nextConfig;
+

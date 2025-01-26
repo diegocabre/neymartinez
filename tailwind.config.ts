@@ -9,19 +9,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        verdes: "#57bc90",
-        rojo: "#e62b1e",
-        amarillo: "#f7ef6a",
-        fondo: "#015249",
-        azul: "#77c9d4",
-        letras: "#e5d8f6",
+        verdes: "#33453C",
+        rojo: "#FE6020",
+        amarillo: "#ECE8DF",
+        fondo: "#0F2613",
+        letras: "#CCAC8E",
       },
       backgroundImage: {
-        "gradient-custom": "linear-gradient(135deg, #015249 50%, #000000 100%)",
-        "gradient-custom2":"linear-gradient(135deg, #e5d8f6 20%, #000000 100%)",
+        "gradient-custom": "linear-gradient(135deg, #0F2613 50%, #33453C 100%)",
+        "gradient-custom2":
+          "linear-gradient(135deg, #ECE8DF 35%, #33453C 100%)",
+        "gradient-custom3":
+          "linear-gradient(135deg, #33453C 50%, #33453C 100%)",
       },
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
+        magent: ["Magent", "sans-serif"],
+        hagia: ["Hagia Sugnatur", "cursive"],
       },
       keyframes: {
         moveCircle: {
@@ -34,7 +37,9 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("daisyui"),
+  ],
 };
 
 export default config;

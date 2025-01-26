@@ -1,12 +1,19 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Poppins } from "next/font/google";
-import { Footer, Header } from "../components/";
+import { Open_Sans } from "next/font/google";
+import { Footer, NavBar } from "../components/";
 
 const poppinsFont = Poppins({
   weight: ["400", "600", "800"],
   subsets: ["latin"],
 });
+
+const openSansFont = Open_Sans({
+  weight: ["400", "600", "800"],
+  subsets: ["latin"],
+});
+
 
 export const metadata: Metadata = {
   title: "Neydemar Martinez - Oratoria",
@@ -20,8 +27,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={poppinsFont.className}>
-        <Header />
+      <body className={/* openSansFont.className + " " +  */poppinsFont.className}>
+        <NavBar />
         {children}
         <Footer />
       </body>
