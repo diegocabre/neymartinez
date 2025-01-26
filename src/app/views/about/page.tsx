@@ -50,7 +50,8 @@ export default function AboutPage() {
             Emigrar no estaba en mi tablero de sueños, no era una ruta alternativa, pero fue el camino que tuve que tomar.
             <br />
             <br />
-            Allí entendí que ser líder no tiene que ver con tener personas a cargo o tener un cargo, ser líder es <strong>&quot;Hacer que las cosas sucedan&quot;</strong>, y eso incluye nuestra propia vida.
+            Allí entendí que ser líder no tiene que ver con tener personas a cargo o tener un cargo, ser líder es <strong>{`"Hacer que las cosas sucedan"`}</strong>
+            , y eso incluye nuestra propia vida.
           </p>
         </div>
         {/* Imagen */}
