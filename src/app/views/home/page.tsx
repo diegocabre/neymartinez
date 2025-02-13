@@ -26,12 +26,8 @@ export default function HomePage() {
 
         {/* Contenido */}
         <div className="w-full lg:w-1/2 text-center lg:text-left space-y-6">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-rojo">
-            <span className="italic text-4xl md:text-6xl lg:text-7xl">
-              Ruta al logro:
-            </span>
-            <br />
-            de la claridad a la acción
+          <h1 className="italic text-2xl md:text-4xl lg:text-5xl font-bold text-rojo">
+            Ruta al logro: de la claridad a la acción
           </h1>
 
           <h4 className="text-lg md:text-xl font-medium text-rojo">
@@ -78,11 +74,12 @@ export default function HomePage() {
                 alt="Flecha"
                 width={100}
                 height={100}
+                priority
               />
             </div>
             <Link
               href="/views/about"
-              className="flex items-center bg-white text-verde-oscuro font-semibold px-6 py-2 rounded-md shadow-lg hover:bg-amarillo hover:text-verde-oscuro transition"
+              className="flex items-center bg-white text-verdes font-semibold px-6 py-2 rounded-md shadow-lg hover:bg-amarillo hover:text-verdes transition"
               passHref
             >
               Seguir leyendo <span className="ml-2"><IoArrowRedoOutline /></span>
@@ -94,15 +91,116 @@ export default function HomePage() {
         {/* Imagen */}
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
           <Image
-            src="/assets/img/Neyrojo.jpg" // Cambia esta ruta según corresponda
+            src="/assets/img/Neyrojo1.jpg" // Cambia esta ruta según corresponda
             alt="Foto de Ney Martínez"
             width={400}
             height={400}
-            className="rounded-full shadow-lg"
+            className="rounded-xl object-cover max-w-[90%] h-auto shadow-lg mt-10 mb-10"
             priority
           />
         </div>
       </section>
+
+      <section className="flex flex-col md:flex-row items-center min-h-screen gap-10 bg-letras lg:px-20">
+        {/* Contenedor izquierdo (imagen + botón) */}
+        <div className="w-full md:w-1/2 flex flex-col items-center md:items-end  gap-10">
+          {/* Imagen principal */}
+          <Image
+            src="/assets/img/ruta.png"
+            alt="Ruta al logro"
+            width={400}
+            height={400}
+            className="rounded-xl object-cover max-w-[90%] h-auto shadow-lg mt-10"
+            priority
+          />
+
+          {/* Contenedor de flecha + botón */}
+          <div className="flex flex-row items-center">
+            {/* Flecha */}
+            <Image
+              src="/assets/img/flechan.png"
+              alt="Flecha"
+              width={60}
+              height={60}
+              className="w-14 h-14" // Reduce el espacio debajo de la flecha aún más
+              priority
+            />
+
+            {/* Botón */}
+            <Link
+              href="/views/comienza-aqui"
+              className="flex items-center justify-center bg-rojo text-amarillo font-semibold px-6 py-2 rounded-md shadow-lg hover:bg-amarillo hover:text-verdes transition w-full max-w-xs mt-[-8px]"
+              passHref
+            >
+              Quiero Comenzar <span className="ml-2"><IoArrowRedoOutline /></span>
+            </Link>
+          </div>
+        </div>
+
+        {/* Imagen lateral derecha (ajustada en md) */}
+        <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-2 mr-5">
+          <Image
+            src="/assets/img/ney2.jpg"
+            alt="Ney Martínez"
+            width={400}
+            height={400}
+            className="rounded-xl object-cover max-w-[90%] h-auto shadow-lg mb-2"
+            priority
+          />
+        </div>
+      </section>
+
+      <section className="flex flex-col md:flex-row items-center md:items-center justify-center md:justify-between min-h-screen bg-amarillo px-6 lg:px-20">
+
+        {/* Imagen al lado izquierdo en md+ */}
+        <div className="w-full md:w-[60%] lg:w-[50%] flex flex-col items-center md:items-start">
+          <Image
+            src="/assets/img/Ney006.png"
+            alt="ney podcast"
+            width={500} // Aumenta el tamaño para md+
+            height={500}
+            className="rounded-xl object-cover max-w-[90%] h-auto shadow-lg mt-10 mb-10"
+            priority
+          />
+        </div>
+
+        {/* Texto y botón al lado derecho */}
+        <div className="w-full md:w-[40%] lg:w-[50%] flex flex-col items-center md:items-start">
+          <article className="text-center md:text-left">
+            <p className="text-lg text-verdes">
+              Un Podcast creado para compartir herramientas, ejercicios y prácticas que te permiten desarrollar y mejorar tus habilidades de oratoria.
+            </p>
+            <p className="text-lg text-verdes">
+              Enfocado en crear mensajes VIP, que aportan VALOR para tu audiencia, los INSPIRAN a pasar a la acción y tienen PROPÓSITO.
+            </p>
+            <br />
+            <p className="text-lg text-verdes">
+              Todos tenemos algo para decir y hablar en público es "Para todo público".
+            </p>
+          </article>
+
+          {/* Botón alineado correctamente debajo del texto */}
+          <div className="flex flex-col items-center md:items-start mt-4">
+            <Image
+              src="/assets/img/flechan.png"
+              alt="Flecha"
+              width={60}
+              height={60}
+              className="w-14 h-14"
+              priority
+            />
+            <Link
+              href="https://link.chtbl.com/Oratoria_VIP"
+              className="flex items-center justify-center bg-rojo text-amarillo font-semibold px-6 py-2 rounded-md shadow-lg hover:bg-amarillo hover:text-verdes transition w-full max-w-xs mt-2"
+              passHref
+            >
+              Escuchar <span className="ml-2"><IoArrowRedoOutline /></span>
+            </Link>
+          </div>
+        </div>
+
+      </section>
+
     </>
   );
 }
