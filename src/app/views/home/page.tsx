@@ -68,14 +68,21 @@ export default function HomePage() {
               Hablarte de mí es fácil si te digo que soy como un Paquete Microsoft Office.
             </p>
           </div>
-          <div className="flex flex-col items-center md:items-start space-y-4">
-            <Image src="/assets/img/flechan.png" alt="Flecha" width={100} height={100} priority />
+          <div className="flex flex-row items-center md:items-start mt-4">
+            <Image
+              src="/assets/img/flechan.png"
+              alt="Flecha"
+              width={60}
+              height={60}
+              className="w-14 h-14"
+              priority
+            />
             <Link
-              href="/views/about"
-              className="flex items-center bg-white text-verdes font-semibold px-6 py-2 rounded-md shadow-lg hover:bg-amarillo hover:text-verdes transition"
+              href="https://link.chtbl.com/Oratoria_VIP"
+              className="flex items-center justify-center bg-rojo text-amarillo font-semibold px-6 py-2 rounded-md shadow-lg hover:bg-amarillo hover:text-verdes transition w-full max-w-xs mt-2"
               passHref
             >
-              Seguir leyendo <span className="ml-2"><IoArrowRedoOutline /></span>
+              Seguir Leyendo <span className="ml-2"><IoArrowRedoOutline /></span>
             </Link>
           </div>
         </div>
@@ -174,7 +181,7 @@ export default function HomePage() {
               alt="Flecha"
               width={60}
               height={60}
-              className="w-14 h-14 mt-5"
+              className="w-14 h-14"
               priority
             />
             <Link
