@@ -150,7 +150,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="flex flex-col md:flex-row items-center md:items-center justify-center md:justify-between min-h-screen bg-amarillo px-6 lg:px-20">
+      <section className="flex flex-col md:flex-row items-center md:items-center justify-center md:justify-between min-h-screen bg-amarillo px-6 lg:px-20 py-10">
 
         {/* Imagen al lado izquierdo en md+ */}
         <div className="w-full md:w-[60%] lg:w-[50%] flex flex-col items-center md:items-start">
