@@ -78,7 +78,7 @@ export default function HomePage() {
               priority
             />
             <Link
-              href="https://link.chtbl.com/Oratoria_VIP"
+              href="/views/about"
               className="flex items-center justify-center bg-rojo text-amarillo font-semibold px-6 py-2 rounded-md shadow-lg hover:bg-amarillo hover:text-verdes transition w-full max-w-xs mt-2"
               passHref
             >
