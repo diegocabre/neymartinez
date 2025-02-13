@@ -175,7 +175,7 @@ export default function HomePage() {
             </p>
             <br />
             <p className="text-lg text-verdes">
-              Todos tenemos algo para decir y hablar en público es "Para todo público".
+              {'Todos tenemos algo para decir y hablar en público es "Para todo público".'}
             </p>
           </article>
 
