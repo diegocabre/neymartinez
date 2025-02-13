@@ -86,17 +86,20 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
+
+        {/* Imagen más grande en `md` y `lg` */}
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
           <Image
             src="/assets/img/Neyrojo1.jpg"
             alt="Foto de Ney Martínez"
-            width={400}
-            height={400}
-            className="rounded-xl object-cover max-w-[90%] h-auto shadow-lg mt-10"
+            width={500}
+            height={500}
+            className="rounded-xl object-cover w-[90%] md:w-[75%] lg:w-[85%] h-auto shadow-lg mt-10"
             priority
           />
         </div>
       </motion.section>
+
 
       {/* Sección Ruta */}
       <motion.section
@@ -106,17 +109,26 @@ export default function HomePage() {
         viewport={{ once: true }}
         className="flex flex-col md:flex-row items-center min-h-screen gap-10 bg-letras lg:px-20"
       >
+        {/* Contenedor Izquierdo */}
         <div className="w-full md:w-1/2 flex flex-col items-center md:items-end gap-10">
+          {/* Imagen más grande en pantallas md y lg */}
           <Image
             src="/assets/img/ruta.png"
             alt="Ruta al logro"
-            width={400}
-            height={400}
-            className="rounded-xl object-cover max-w-[90%] h-auto shadow-lg mt-10"
+            width={500}
+            height={500}
+            className="rounded-xl object-cover w-[90%] md:w-[70%] lg:w-[80%] h-auto shadow-lg mt-10"
             priority
           />
           <div className="flex flex-row items-center">
-            <Image src="/assets/img/flechan.png" alt="Flecha" width={60} height={60} className="w-14 h-14" priority />
+            <Image
+              src="/assets/img/flechan.png"
+              alt="Flecha"
+              width={60}
+              height={60}
+              className="w-14 h-14"
+              priority
+            />
             <Link
               href="/views/comienza-aqui"
               className="flex items-center justify-center bg-rojo text-amarillo font-semibold px-6 py-2 rounded-md shadow-lg hover:bg-amarillo hover:text-verdes transition w-full max-w-xs"
@@ -126,17 +138,20 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
+
+        {/* Imagen lateral derecha (ajustada en md y lg) */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-2 mr-5">
           <Image
             src="/assets/img/ney2.jpg"
             alt="Ney Martínez"
-            width={400}
-            height={400}
-            className="rounded-xl object-cover max-w-[90%] h-auto shadow-lg"
+            width={500}
+            height={500}
+            className="rounded-xl object-cover w-[90%] md:w-[70%] lg:w-[80%] h-auto shadow-lg"
             priority
           />
         </div>
       </motion.section>
+
 
       {/* seccion del podcast */}
       <motion.section
