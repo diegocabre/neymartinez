@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "prisma generate && next build",
+    "postinstall": "npm install tailwindcss postcss autoprefixer",
     "start": "NODE_ENV=production node server.js",
     "lint": "next lint"
   },
