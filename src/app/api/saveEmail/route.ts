@@ -16,9 +16,10 @@ export async function POST(req: Request) {
         }
 
         // Guardar en la base de datos
-        const newEmail = await prisma.email.create({
+        await prisma.email.create({
             data: { email },
         });
+        
 
         // **Configuración de Nodemailer**
         const transporter = nodemailer.createTransport({
