@@ -62,7 +62,7 @@ export async function POST(req: Request) {
         // **Enviar el email**
         await transporter.sendMail(mailOptions);
 
-        return NextResponse.json({ message: "Email enviado con éxito" }, { status: 200 });
+        return NextResponse.json({ message: "Gracias por tu registro" }, { status: 200 });
     } catch (error) {
         console.error("Error enviando el email:", error);
         return NextResponse.json({ message: "Error interno del servidor" }, { status: 500 });
