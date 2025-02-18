@@ -13,7 +13,7 @@ export async function POST(req: Request) {
             return NextResponse.json({ message: "Email inválido" }, { status: 400 });
         }
 
-        // ✅ Guardar en la base de datos usando la instancia global
+        // ✅ Guardar en la base de datos
         await prisma.email.create({
             data: { email },
         });
@@ -29,35 +29,22 @@ export async function POST(req: Request) {
             },
         });
 
-        // ✅ Obtener rutas de los archivos PDF
-        const pdf1Path = path.join(process.cwd(), "public/assets/doc/DesafioOratoria.pdf");
-        const pdf2Path = path.join(process.cwd(), "public/assets/doc/MetasHabitosResultados.pdf");
+        // ✅ Obtener URLs de los archivos PDF en lugar de leer desde el servidor
+        const pdf1Url = `${process.env.NEXT_PUBLIC_SITE_URL}/static/doc/DesafioOratoria.pdf`;
+        const pdf2Url = `${process.env.NEXT_PUBLIC_SITE_URL}/static/doc/MetasHabitosResultados.pdf`;
 
-        if (!fs.existsSync(pdf1Path) || !fs.existsSync(pdf2Path)) {
-            console.error("Uno o más archivos PDF no se encontraron.");
-            return NextResponse.json({ message: "Error al cargar los archivos adjuntos" }, { status: 500 });
-        }
-
-        // ✅ Leer archivos PDF
-        const pdf1 = fs.readFileSync(pdf1Path);
-        const pdf2 = fs.readFileSync(pdf2Path);
-
-        // ✅ Configurar el Email
+        // ✅ Configurar el Email con links en lugar de adjuntar archivos
         const mailOptions = {
             from: process.env.EMAIL_USER,
             to: email,
             subject: "Tu E-Book Ruta al Logro 📘",
-            text: "Gracias por registrarte. Aquí tienes los documentos en PDF adjuntos.",
-            attachments: [
-                { filename: "DesafioOratoria.pdf", content: pdf1, encoding: "base64" },
-                { filename: "MetasHabitosResultados.pdf", content: pdf2, encoding: "base64" },
-            ],
+            text: `Gracias por registrarte. Aquí tienes los documentos en PDF adjuntos.\n\n📎 Desafío Oratoria: ${pdf1Url}\n📎 Metas, Hábitos y Resultados: ${pdf2Url}`,
         };
 
         // ✅ Enviar el email
         await transporter.sendMail(mailOptions);
 
-        return NextResponse.json({ message: "Gracias por tu registro" }, { status: 200 });
+        return NextResponse.json({ message: "Gracias por tu registro. Revisa tu correo." }, { status: 200 });
     } catch (error) {
         console.error("Error enviando el email:", error);
         return NextResponse.json({ message: "Error interno del servidor" }, { status: 500 });
