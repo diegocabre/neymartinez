@@ -7,11 +7,24 @@ const nextConfig = {
         protocol: "https",
         hostname: "github.com",
         port: "",
-        pathname: "/**", // Permite todas las rutas bajo github.com
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "raw.githubusercontent.com",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "img.daisyui.com", // Agregado
+        port: "",
+        pathname: "/**", // Permite todas las rutas bajo img.daisyui.com
       },
     ],
   },
 };
 
 export default nextConfig;
+
 
