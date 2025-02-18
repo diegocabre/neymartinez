@@ -1,8 +1,6 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";  // ✅ Usa la instancia global
 import nodemailer from "nodemailer";
-import path from "path";
-import fs from "fs";
 
 export async function POST(req: Request) {
     try {
