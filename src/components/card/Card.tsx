@@ -47,7 +47,6 @@ export const Card = ({ src, alt, cardTitle, cardBody, btnText, href, isEmailMode
         }
     };
 
-    // Función para mostrar el modal
     const showModalMessage = (message: string, success: boolean) => {
         setModalMessage(message);
         setIsSuccess(success);
@@ -55,11 +54,11 @@ export const Card = ({ src, alt, cardTitle, cardBody, btnText, href, isEmailMode
     };
 
     return (
-        <div className="relative">
+        <div className="relative h-full">
             {/* Tarjeta principal */}
-            <div className="flex flex-col lg:flex-row bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-3xl mx-auto p-4">
+            <div className="flex flex-col lg:flex-row bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-3xl mx-auto p-4 h-full min-h-[300px]">
                 {/* Imagen o Input de Email */}
-                <figure className="w-full lg:w-1/3 flex justify-center items-center">
+                <figure className="w-full lg:w-1/3 h-full flex justify-center items-center">
                     {isEmailMode ? (
                         <input
                             type="email"
@@ -72,19 +71,33 @@ export const Card = ({ src, alt, cardTitle, cardBody, btnText, href, isEmailMode
                         src && (
                             href ? (
                                 <Link href={href} target="_blank" passHref>
-                                    <Image src={src} alt={alt || ""} width={300} height={300} className="w-full h-auto object-cover rounded-md" priority />
+                                    <Image
+                                        src={src}
+                                        alt={alt || ""}
+                                        width={300}
+                                        height={300}
+                                        className="w-full h-full object-cover rounded-md"
+                                        priority
+                                    />
                                 </Link>
                             ) : (
-                                <Image src={src} alt={alt || ""} width={300} height={300} className="w-full h-auto object-cover rounded-md" priority />
+                                <Image
+                                    src={src}
+                                    alt={alt || ""}
+                                    width={300}
+                                    height={300}
+                                    className="w-full h-full object-cover rounded-md"
+                                    priority
+                                />
                             )
                         )
                     )}
                 </figure>
 
                 {/* Contenido de la Tarjeta */}
-                <div className="flex flex-col justify-between w-full lg:w-2/3 p-4">
+                <div className="flex flex-col justify-between w-full lg:w-2/3 p-4 h-full">
                     <h2 className="text-lg lg:text-xl font-semibold text-gray-800">{cardTitle}</h2>
-                    <p className="text-sm lg:text-base text-gray-600">{cardBody}</p>
+                    <p className="text-sm lg:text-base text-gray-600 flex-grow">{cardBody}</p>
 
                     <div className="mt-4 flex justify-end">
                         {isEmailMode ? (
@@ -106,7 +119,7 @@ export const Card = ({ src, alt, cardTitle, cardBody, btnText, href, isEmailMode
                 </div>
             </div>
 
-            {/* 🌟 Modal de Notificación */}
+            {/* Modal de Notificación */}
             {showModal && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
                     <div className="bg-white rounded-lg p-6 max-w-sm w-full text-center shadow-lg">
