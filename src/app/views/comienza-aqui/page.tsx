@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function ComienzaAquiPage() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-4 md:px-10 lg:px-20">
+    <div className="flex flex-col items-center justify-center min-h-screen px-4 md:px-10 lg:px-20 bg-fondo">
 
       {/* Imagen grande y centrada */}
       <div className="w-full flex justify-center mt-6 md:mt-10">
