@@ -29,7 +29,7 @@ export default function ComienzaAquiPage() {
         <Card
           src="/assets/img/ney1.jpg"
           alt="Mentoría"
-          cardTitle="Mentoría"
+          cardTitle="Mentoría personalizada"
           cardBody="Quiero la mentoría para trazar mi ruta al Logro."
           btnText="Ir a WhatsApp"
           href="https://walink.co/d79ff0"
@@ -45,7 +45,6 @@ export default function ComienzaAquiPage() {
           isEmailMode={false}
         />
       </div>
-
     </div>
   );
 }

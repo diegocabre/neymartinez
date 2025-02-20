@@ -7,7 +7,7 @@ import fs from "fs";
 export async function POST(req: Request) {
     try {
         const body = await req.json();
-        const { email, source } = body;  // 🔹 `source` es opcional
+        const { email, source } = body;
 
         if (!email || !email.includes("@")) {
             return NextResponse.json({ message: "Email inválido" }, { status: 400 });
@@ -38,7 +38,7 @@ export async function POST(req: Request) {
             return NextResponse.json({ message: "Uno de los archivos PDF no existe." }, { status: 500 });
         }
 
-        // 🔹 Lógica para adjuntar el PDF según `source`
+        // 🔹 Lógica para adjuntar los PDF y mensajes personalizados
         let mailOptions;
 
         switch (source) {
@@ -46,12 +46,17 @@ export async function POST(req: Request) {
                 mailOptions = {
                     from: process.env.EMAIL_USER,
                     to: email,
-                    subject: "Tu E-Book: Metas, Hábitos y Resultados 📘",
-                    text: "Gracias por registrarte. Aquí tienes el ebook solicitado.",
+                    subject: "🎁 Tu E-Book: Metas, Hábitos y Resultados 📘 + Regalo Especial 🎀",
+                    text: `¡Gracias por registrarte! 🎉\n\nAquí tienes tu ebook solicitado:\n📎 Metas, Hábitos y Resultados.\n\n🎁 Como regalo especial, también te enviamos el ebook "Desafío Oratoria". ¡Esperamos que lo disfrutes!`,
                     attachments: [
                         {
                             filename: "MetasHabitosResultados.pdf",
                             path: pdfMetasPath,
+                            contentType: "application/pdf"
+                        },
+                        {
+                            filename: "DesafioOratoria.pdf",
+                            path: pdfOratoriaPath,
                             contentType: "application/pdf"
                         }
                     ]
@@ -62,12 +67,17 @@ export async function POST(req: Request) {
                 mailOptions = {
                     from: process.env.EMAIL_USER,
                     to: email,
-                    subject: "Tu E-Book: Desafío Oratoria 🎤",
-                    text: "Gracias por registrarte. Aquí tienes el ebook solicitado.",
+                    subject: "🎁 Tu E-Book: Desafío Oratoria 🎤 + Regalo Especial 🎀",
+                    text: `¡Gracias por registrarte! 🎉\n\nAquí tienes tu ebook solicitado:\n📎 Desafío Oratoria.\n\n🎁 Como regalo especial, también te enviamos el ebook "Metas, Hábitos y Resultados". ¡Esperamos que lo disfrutes!`,
                     attachments: [
                         {
                             filename: "DesafioOratoria.pdf",
                             path: pdfOratoriaPath,
+                            contentType: "application/pdf"
+                        },
+                        {
+                            filename: "MetasHabitosResultados.pdf",
+                            path: pdfMetasPath,
                             contentType: "application/pdf"
                         }
                     ]
@@ -75,16 +85,21 @@ export async function POST(req: Request) {
                 break;
 
             default:
-                // ✅ Si no hay `source`, enviamos el PDF de Desafío Oratoria por defecto
+                // ✅ Si no hay `source`, enviamos ambos como recurso por defecto
                 mailOptions = {
                     from: process.env.EMAIL_USER,
                     to: email,
-                    subject: "Tu E-Book: Recurso Digital 📘",
-                    text: "Gracias por registrarte. Aquí tienes un recurso gratuito para ti.",
+                    subject: "🎁 Tu E-Books Gratuitos 📘",
+                    text: `¡Gracias por registrarte! 🎉\n\nAquí te enviamos dos ebooks gratuitos para tu crecimiento:\n📎 Metas, Hábitos y Resultados.\n📎 Desafío Oratoria.\n\n¡Esperamos que te sean de gran ayuda!`,
                     attachments: [
                         {
                             filename: "DesafioOratoria.pdf",
                             path: pdfOratoriaPath,
+                            contentType: "application/pdf"
+                        },
+                        {
+                            filename: "MetasHabitosResultados.pdf",
+                            path: pdfMetasPath,
                             contentType: "application/pdf"
                         }
                     ]
@@ -92,7 +107,7 @@ export async function POST(req: Request) {
                 break;
         }
 
-        // ✅ Enviar el email con el PDF adjunto
+        // ✅ Enviar el email con los PDF adjuntos
         await transporter.sendMail(mailOptions);
 
         return NextResponse.json({ message: `Email enviado con éxito desde la página: ${source || "predeterminada"}` }, { status: 200 });
