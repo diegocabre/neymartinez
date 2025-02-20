@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Transition } from "@headlessui/react";
 import { IoCheckmarkCircle, IoCloseCircle } from "react-icons/io5";
 
 interface Props {
@@ -19,13 +18,13 @@ interface Props {
 
 export const Card = ({ src, alt, cardTitle, cardBody, btnText, href, isEmailMode, source }: Props) => {
     const [email, setEmail] = useState("");
-    const [showToast, setShowToast] = useState(false);
-    const [toastMessage, setToastMessage] = useState("");
-    const [isSuccess, setIsSuccess] = useState(true); // Determina si es un mensaje de éxito o error
+    const [showModal, setShowModal] = useState(false);
+    const [modalMessage, setModalMessage] = useState("");
+    const [isSuccess, setIsSuccess] = useState(true);
 
     const handleSubmit = async () => {
         if (!email || !email.includes("@")) {
-            showToastMessage("❌ Por favor, ingresa un email válido.", false);
+            showModalMessage("❌ Por favor, ingresa un email válido.", false);
             return;
         }
 
@@ -37,32 +36,29 @@ export const Card = ({ src, alt, cardTitle, cardBody, btnText, href, isEmailMode
             });
 
             if (response.ok) {
-                showToastMessage("✅ ¡Tu ebook está en camino! 📩", true);
+                showModalMessage("✅ ¡Tu ebook está en camino! 📩", true);
                 setEmail("");
             } else {
-                showToastMessage("⚠️ El correo ya está registrado.", false);
+                showModalMessage("⚠️ El correo ya está registrado.", false);
             }
         } catch (error) {
             console.error("Error al guardar el email:", error);
-            showToastMessage("🚫 Hubo un problema al enviar el correo.", false);
+            showModalMessage("🚫 Hubo un problema al enviar el correo.", false);
         }
     };
 
-    // Función para mostrar el toast
-    const showToastMessage = (message: string, success: boolean) => {
-        setToastMessage(message);
+    // Función para mostrar el modal
+    const showModalMessage = (message: string, success: boolean) => {
+        setModalMessage(message);
         setIsSuccess(success);
-        setShowToast(true);
-
-        // Ocultar después de 5 segundos
-        setTimeout(() => setShowToast(false), 5000);
+        setShowModal(true);
     };
 
     return (
         <div className="relative">
-            {/* 🔹 Tarjeta principal */}
+            {/* Tarjeta principal */}
             <div className="flex flex-col lg:flex-row bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-3xl mx-auto p-4">
-                {/* 📸 Imagen o Input de Email */}
+                {/* Imagen o Input de Email */}
                 <figure className="w-full lg:w-1/3 flex justify-center items-center">
                     {isEmailMode ? (
                         <input
@@ -85,7 +81,7 @@ export const Card = ({ src, alt, cardTitle, cardBody, btnText, href, isEmailMode
                     )}
                 </figure>
 
-                {/* 📝 Contenido de la Tarjeta */}
+                {/* Contenido de la Tarjeta */}
                 <div className="flex flex-col justify-between w-full lg:w-2/3 p-4">
                     <h2 className="text-lg lg:text-xl font-semibold text-gray-800">{cardTitle}</h2>
                     <p className="text-sm lg:text-base text-gray-600">{cardBody}</p>
@@ -110,21 +106,25 @@ export const Card = ({ src, alt, cardTitle, cardBody, btnText, href, isEmailMode
                 </div>
             </div>
 
-            {/* 🌟 Toast de Notificación */}
-            <Transition
-                show={showToast}
-                enter="transition-opacity duration-500"
-                enterFrom="opacity-0"
-                enterTo="opacity-100"
-                leave="transition-opacity duration-500"
-                leaveFrom="opacity-100"
-                leaveTo="opacity-0"
-            >
-                <div className={`fixed bottom-5 right-5 flex items-center gap-2 px-4 py-3 rounded-lg shadow-lg text-white ${isSuccess ? "bg-green-500" : "bg-red-500"}`}>
-                    {isSuccess ? <IoCheckmarkCircle size={20} /> : <IoCloseCircle size={20} />}
-                    <span>{toastMessage}</span>
+            {/* 🌟 Modal de Notificación */}
+            {showModal && (
+                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+                    <div className="bg-white rounded-lg p-6 max-w-sm w-full text-center shadow-lg">
+                        {isSuccess ? (
+                            <IoCheckmarkCircle size={40} className="text-green-500 mx-auto mb-3" />
+                        ) : (
+                            <IoCloseCircle size={40} className="text-red-500 mx-auto mb-3" />
+                        )}
+                        <p className="text-lg font-semibold text-gray-800">{modalMessage}</p>
+                        <button
+                            onClick={() => setShowModal(false)}
+                            className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
+                        >
+                            Cerrar
+                        </button>
+                    </div>
                 </div>
-            </Transition>
+            )}
         </div>
     );
 };
