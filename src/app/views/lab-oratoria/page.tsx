@@ -1,8 +1,7 @@
 import { Card } from "@/components/card/Card";
 import Head from "next/head";
 import Image from "next/image";
-import { IoMicOutline } from "react-icons/io5";
-//import { FormPago } from "@/components";
+
 
 export const metadata = {
   title: "LAB-Oratoria | Ney Martínez",
