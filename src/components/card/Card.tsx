@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Transition } from "@headlessui/react";
+import { IoCheckmarkCircle, IoCloseCircle } from "react-icons/io5";
 
 interface Props {
     src?: string;
@@ -20,11 +21,11 @@ export const Card = ({ src, alt, cardTitle, cardBody, btnText, href, isEmailMode
     const [email, setEmail] = useState("");
     const [showToast, setShowToast] = useState(false);
     const [toastMessage, setToastMessage] = useState("");
+    const [isSuccess, setIsSuccess] = useState(true); // Determina si es un mensaje de éxito o error
 
     const handleSubmit = async () => {
         if (!email || !email.includes("@")) {
-            setToastMessage("❌ Por favor, ingresa un email válido.");
-            setShowToast(true);
+            showToastMessage("❌ Por favor, ingresa un email válido.", false);
             return;
         }
 
@@ -36,18 +37,25 @@ export const Card = ({ src, alt, cardTitle, cardBody, btnText, href, isEmailMode
             });
 
             if (response.ok) {
-                setToastMessage("✅ ¡Tu ebook está en camino! 📩");
+                showToastMessage("✅ ¡Tu ebook está en camino! 📩", true);
                 setEmail("");
             } else {
-                setToastMessage("⚠️ El correo ya está registrado.");
+                showToastMessage("⚠️ El correo ya está registrado.", false);
             }
         } catch (error) {
             console.error("Error al guardar el email:", error);
-            setToastMessage("🚫 Hubo un problema al enviar el correo.");
-        } finally {
-            setShowToast(true);
-            setTimeout(() => setShowToast(false), 5000); // Ocultar notificación tras 5 segundos
+            showToastMessage("🚫 Hubo un problema al enviar el correo.", false);
         }
+    };
+
+    // Función para mostrar el toast
+    const showToastMessage = (message: string, success: boolean) => {
+        setToastMessage(message);
+        setIsSuccess(success);
+        setShowToast(true);
+
+        // Ocultar después de 5 segundos
+        setTimeout(() => setShowToast(false), 5000);
     };
 
     return (
@@ -112,8 +120,9 @@ export const Card = ({ src, alt, cardTitle, cardBody, btnText, href, isEmailMode
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
             >
-                <div className="fixed bottom-5 right-5 bg-green-500 text-white text-sm px-4 py-2 rounded-lg shadow-lg">
-                    {toastMessage}
+                <div className={`fixed bottom-5 right-5 flex items-center gap-2 px-4 py-3 rounded-lg shadow-lg text-white ${isSuccess ? "bg-green-500" : "bg-red-500"}`}>
+                    {isSuccess ? <IoCheckmarkCircle size={20} /> : <IoCloseCircle size={20} />}
+                    <span>{toastMessage}</span>
                 </div>
             </Transition>
         </div>
