@@ -20,12 +20,19 @@ export default function ComienzaAquiPage() {
       {/* Cards en formato de grid responsivo */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-8">
         <Card
-          src="/assets/img/whatsapp.jpg"
+          cardTitle="E-book Ruta al Logro"
+          cardBody="Descarga el E-book Ruta al Logro, ingresa tu correo para recibirlo."
+          btnText="Descargar E-book"
+          isEmailMode={true}
+          source="comienza-aqui"
+        />
+        <Card
+          src="/assets/img/ney1.jpg"
           alt="Mentoría"
           cardTitle="Mentoría"
           cardBody="Quiero la mentoría para trazar mi ruta al Logro."
           btnText="Ir a WhatsApp"
-          href="https://api.whatsapp.com/send?phone=5491140983793"
+          href="https://walink.co/d79ff0"
           isEmailMode={false}
         />
         <Card
@@ -34,14 +41,8 @@ export default function ComienzaAquiPage() {
           cardTitle="Grupo Meta en Acción"
           cardBody="Únete al grupo y comparte tu progreso."
           btnText="Únete al Grupo"
-          href="https://api.whatsapp.com/send?phone=5491140983793"
+          href="https://walink.co/d79ff0"
           isEmailMode={false}
-        />
-        <Card
-          cardTitle="E-book Ruta al Logro"
-          cardBody="Descarga el E-book Ruta al Logro, ingresa tu correo para recibirlo."
-          btnText="Descargar E-book"
-          isEmailMode={true}
         />
       </div>
 

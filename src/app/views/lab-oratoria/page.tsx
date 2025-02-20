@@ -1,3 +1,4 @@
+import { Card } from "@/components/card/Card";
 import Head from "next/head";
 import Image from "next/image";
 import { IoMicOutline } from "react-icons/io5";
@@ -70,6 +71,36 @@ export default function LandingPage() {
 
       {/* Contenido principal */}
       <main className="min-h-screen overflow-hidden bg-gray-950">
+        <section className="items-center mb-10 lg:mb-40 px-5 lg:px-20 animate__animated animate__fadeInDown animate__delay-1s">
+          {/* Cards en formato de grid responsivo */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-8">
+            <Card
+              cardTitle="E-book Lab Oratoria"
+              cardBody="Descarga el E-book Lab Oratoria, ingresa tu correo para recibirlo."
+              btnText="Descargar E-book"
+              isEmailMode={true}
+              source="lab-oratoria"
+            />
+            <Card
+              src="/assets/img/ney1.jpg"
+              alt="Mentoría"
+              cardTitle="Mentoría"
+              cardBody="Quiero la mentoría para trazar mi ruta al Logro."
+              btnText="Ir a WhatsApp"
+              href="https://walink.co/d79ff0"
+              isEmailMode={false}
+            />
+            <Card
+              src="/assets/img/whatsappg.jpg"
+              alt="Grupo Meta en Acción"
+              cardTitle="Grupo Meta en Acción"
+              cardBody="Únete al grupo y comparte tu progreso."
+              btnText="Únete al Grupo"
+              href="https://walink.co/d79ff0"
+              isEmailMode={false}
+            />
+          </div>
+        </section>
         {/* Primera Sección */}
         <section className="flex pt-10 mb-10 ml-5">
           <div className="flex items-center justify-center">
@@ -337,11 +368,6 @@ export default function LandingPage() {
             Para desarrollar tu propia manera de comunicar con naturalidad y
             autenticidad
           </p>
-        </section>
-
-        {/* Sección del Formulario de Pago */}
-        <section className="items-center mb-10 lg:mb-40 px-5 lg:px-20 animate__animated animate__fadeInDown animate__delay-1s">
-          {/*<FormPago />*/}
         </section>
       </main>
     </>

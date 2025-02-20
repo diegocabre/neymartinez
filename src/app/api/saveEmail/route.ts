@@ -1,22 +1,24 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";  // ✅ Usa la instancia global
+import { prisma } from "@/lib/prisma";
 import nodemailer from "nodemailer";
+import path from "path";
+import fs from "fs";
 
 export async function POST(req: Request) {
     try {
         const body = await req.json();
-        const { email } = body;
+        const { email, source } = body;  // 🔹 `source` es opcional
 
         if (!email || !email.includes("@")) {
             return NextResponse.json({ message: "Email inválido" }, { status: 400 });
         }
 
-        // ✅ Guardar en la base de datos
+        // ✅ Guardar el email en la base de datos
         await prisma.email.create({
             data: { email },
         });
 
-        // ✅ Configuración de Nodemailer
+        // ✅ Configurar transporte de Nodemailer
         const transporter = nodemailer.createTransport({
             host: "server319.web-hosting.com",
             port: 465,
@@ -27,22 +29,74 @@ export async function POST(req: Request) {
             },
         });
 
-        // ✅ Obtener URLs de los archivos PDF en lugar de leer desde el servidor
-        const pdf1Url = `${process.env.NEXT_PUBLIC_SITE_URL}/static/doc/DesafioOratoria.pdf`;
-        const pdf2Url = `${process.env.NEXT_PUBLIC_SITE_URL}/static/doc/MetasHabitosResultados.pdf`;
+        // ✅ Rutas de los archivos PDF en el servidor
+        const pdfOratoriaPath = path.join(process.cwd(), "public/static/doc/DesafioOratoria.pdf");
+        const pdfMetasPath = path.join(process.cwd(), "public/static/doc/MetasHabitosResultados.pdf");
 
-        // ✅ Configurar el Email con links en lugar de adjuntar archivos
-        const mailOptions = {
-            from: process.env.EMAIL_USER,
-            to: email,
-            subject: "Tu E-Book Ruta al Logro 📘",
-            text: `Gracias por registrarte. Aquí tienes los documentos en PDF adjuntos.\n\n📎 Desafío Oratoria: ${pdf1Url}\n📎 Metas, Hábitos y Resultados: ${pdf2Url}`,
-        };
+        // 🔹 Verificar que los archivos existan
+        if (!fs.existsSync(pdfOratoriaPath) || !fs.existsSync(pdfMetasPath)) {
+            return NextResponse.json({ message: "Uno de los archivos PDF no existe." }, { status: 500 });
+        }
 
-        // ✅ Enviar el email
+        // 🔹 Lógica para adjuntar el PDF según `source`
+        let mailOptions;
+
+        switch (source) {
+            case "comienza-aqui":
+                mailOptions = {
+                    from: process.env.EMAIL_USER,
+                    to: email,
+                    subject: "Tu E-Book: Metas, Hábitos y Resultados 📘",
+                    text: "Gracias por registrarte. Aquí tienes el ebook solicitado.",
+                    attachments: [
+                        {
+                            filename: "MetasHabitosResultados.pdf",
+                            path: pdfMetasPath,
+                            contentType: "application/pdf"
+                        }
+                    ]
+                };
+                break;
+
+            case "lab-oratoria":
+                mailOptions = {
+                    from: process.env.EMAIL_USER,
+                    to: email,
+                    subject: "Tu E-Book: Desafío Oratoria 🎤",
+                    text: "Gracias por registrarte. Aquí tienes el ebook solicitado.",
+                    attachments: [
+                        {
+                            filename: "DesafioOratoria.pdf",
+                            path: pdfOratoriaPath,
+                            contentType: "application/pdf"
+                        }
+                    ]
+                };
+                break;
+
+            default:
+                // ✅ Si no hay `source`, enviamos el PDF de Desafío Oratoria por defecto
+                mailOptions = {
+                    from: process.env.EMAIL_USER,
+                    to: email,
+                    subject: "Tu E-Book: Recurso Digital 📘",
+                    text: "Gracias por registrarte. Aquí tienes un recurso gratuito para ti.",
+                    attachments: [
+                        {
+                            filename: "DesafioOratoria.pdf",
+                            path: pdfOratoriaPath,
+                            contentType: "application/pdf"
+                        }
+                    ]
+                };
+                break;
+        }
+
+        // ✅ Enviar el email con el PDF adjunto
         await transporter.sendMail(mailOptions);
 
-        return NextResponse.json({ message: "Gracias por tu registro. Revisa tu correo." }, { status: 200 });
+        return NextResponse.json({ message: `Email enviado con éxito desde la página: ${source || "predeterminada"}` }, { status: 200 });
+
     } catch (error) {
         console.error("Error enviando el email:", error);
         return NextResponse.json({ message: "Error interno del servidor" }, { status: 500 });

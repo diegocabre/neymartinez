@@ -30,8 +30,8 @@ export const NavBar = () => {
     return (
         <div
             className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled
-                    ? "bg-amarillo/90 backdrop-blur-md shadow-md"
-                    : "bg-amarillo"
+                ? "bg-amarillo/90 backdrop-blur-md shadow-md"
+                : "bg-amarillo"
                 }`}
         >
             <div className="flex items-center justify-between max-w-7xl mx-auto p-4 sm:px-6 lg:px-8">
@@ -64,8 +64,8 @@ export const NavBar = () => {
                             <Link href="/views/home">
                                 <span
                                     className={`btn btn-ghost ${pathname === "/views/home"
-                                            ? "bg-verdes text-amarillo"
-                                            : "text-rojo"
+                                        ? "bg-verdes text-amarillo"
+                                        : "text-rojo"
                                         } hover:bg-verdes hover:text-amarillo transition-colors text-sm md:text-base lg:text-lg`}
                                     onClick={closeMenu} // Cierra el menú al hacer clic
                                 >
@@ -77,8 +77,8 @@ export const NavBar = () => {
                             <Link href="/views/comienza-aqui">
                                 <span
                                     className={`btn btn-ghost ${pathname === "/views/comienza-aqui"
-                                            ? "bg-verdes text-amarillo"
-                                            : "text-rojo"
+                                        ? "bg-verdes text-amarillo"
+                                        : "text-rojo"
                                         } hover:bg-verdes hover:text-amarillo transition-colors text-sm md:text-base lg:text-lg`}
                                     onClick={closeMenu}
                                 >
@@ -94,8 +94,8 @@ export const NavBar = () => {
                             >
                                 <span
                                     className={`btn btn-ghost ${pathname === "/views/podcast"
-                                            ? "bg-verdes text-amarillo"
-                                            : "text-rojo"
+                                        ? "bg-verdes text-amarillo"
+                                        : "text-rojo"
                                         } hover:bg-verdes hover:text-amarillo transition-colors text-sm md:text-base lg:text-lg`}
                                     onClick={closeMenu}
                                 >
@@ -107,12 +107,25 @@ export const NavBar = () => {
                             <Link href="/views/about">
                                 <span
                                     className={`btn btn-ghost ${pathname === "/views/about"
-                                            ? "bg-verdes text-amarillo"
-                                            : "text-rojo"
+                                        ? "bg-verdes text-amarillo"
+                                        : "text-rojo"
                                         } hover:bg-verdes hover:text-amarillo transition-colors text-sm md:text-base lg:text-lg`}
                                     onClick={closeMenu}
                                 >
                                     Sobre Ney
+                                </span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/views/lab-oratoria">
+                                <span
+                                    className={`btn btn-ghost ${pathname === "/views/lab-oratoria"
+                                        ? "bg-verdes text-amarillo"
+                                        : "text-rojo"
+                                        } hover:bg-verdes hover:text-amarillo transition-colors text-sm md:text-base lg:text-lg`}
+                                    onClick={closeMenu}
+                                >
+                                    Lab Oratoria
                                 </span>
                             </Link>
                         </li>
