@@ -57,65 +57,53 @@ export const Card = ({ src, alt, cardTitle, cardBody, btnText, href, isEmailMode
         <div className="relative h-full">
             {/* Tarjeta principal */}
             <div className="flex flex-col lg:flex-row bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-3xl mx-auto p-4 h-full min-h-[300px]">
-                {/* Imagen o Input de Email */}
-                <figure className="w-full lg:w-1/3 h-full flex justify-center items-center">
-                    {isEmailMode ? (
-                        <input
-                            type="email"
-                            placeholder="Ingresa tu email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            className="input input-bordered w-full p-2 text-sm rounded-md border-gray-300"
+                {/* Imagen */}
+                {src && (
+                    <figure className="w-full lg:w-1/3 h-full flex justify-center items-center">
+                        <Image
+                            src={src}
+                            alt={alt || "Imagen"}
+                            width={300}
+                            height={300}
+                            className="w-full h-auto object-cover rounded-md"
+                            priority
                         />
-                    ) : (
-                        src && (
-                            href ? (
-                                <Link href={href} target="_blank" passHref>
-                                    <Image
-                                        src={src}
-                                        alt={alt || ""}
-                                        width={300}
-                                        height={300}
-                                        className="w-full h-full object-cover rounded-md"
-                                        priority
-                                    />
-                                </Link>
-                            ) : (
-                                <Image
-                                    src={src}
-                                    alt={alt || ""}
-                                    width={300}
-                                    height={300}
-                                    className="w-full h-full object-cover rounded-md"
-                                    priority
-                                />
-                            )
-                        )
-                    )}
-                </figure>
+                    </figure>
+                )}
 
                 {/* Contenido de la Tarjeta */}
                 <div className="flex flex-col justify-between w-full lg:w-2/3 p-4 h-full">
                     <h2 className="text-lg lg:text-xl font-semibold text-gray-800">{cardTitle}</h2>
                     <p className="text-sm lg:text-base text-gray-600 flex-grow">{cardBody}</p>
 
-                    <div className="mt-4 flex justify-end">
-                        {isEmailMode ? (
+                    {/* Input de Email si está en modo email */}
+                    {isEmailMode && (
+                        <div className="mt-4">
+                            <input
+                                type="email"
+                                placeholder="Ingresa tu email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                className="input input-bordered w-full p-2 text-sm rounded-md border-gray-300 mb-2"
+                            />
                             <button
                                 onClick={handleSubmit}
-                                className="w-full lg:w-auto bg-blue-600 text-white font-bold px-4 py-2 rounded-md hover:bg-blue-700 transition"
+                                className="w-full bg-blue-600 text-white font-bold px-4 py-2 rounded-md hover:bg-blue-700 transition"
                             >
                                 {btnText}
                             </button>
-                        ) : (
-                            <button
-                                onClick={() => window.open(href, "_blank")}
-                                className="w-full lg:w-auto bg-red-600 text-white font-bold px-4 py-2 rounded-md hover:bg-red-700 transition"
-                            >
-                                {btnText}
-                            </button>
-                        )}
-                    </div>
+                        </div>
+                    )}
+
+                    {/* Botón si no está en modo email */}
+                    {!isEmailMode && href && (
+                        <button
+                            onClick={() => window.open(href, "_blank")}
+                            className="w-full lg:w-auto bg-red-600 text-white font-bold px-4 py-2 rounded-md hover:bg-red-700 transition mt-4"
+                        >
+                            {btnText}
+                        </button>
+                    )}
                 </div>
             </div>
 

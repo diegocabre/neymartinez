@@ -75,6 +75,7 @@ export default function LandingPage() {
           {/* Cards en formato de grid responsivo */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-8">
             <Card
+              src="/assets/img/desafiooratoria.png"
               cardTitle="E-book Lab Oratoria"
               cardBody="Descarga el E-book Lab Oratoria, ingresa tu correo para recibirlo."
               btnText="Descargar E-book"
