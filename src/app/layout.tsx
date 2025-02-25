@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Poppins } from "next/font/google";
-import { Open_Sans } from "next/font/google";
+import { Poppins, Open_Sans } from "next/font/google";
 import { Footer, NavBar } from "../components/";
 
 const poppinsFont = Poppins({
@@ -14,7 +13,6 @@ const openSansFont = Open_Sans({
   subsets: ["latin"],
 });
 
-
 export const metadata: Metadata = {
   title: "Neydemar Martinez - Oratoria",
   description: "Oratoria",
@@ -26,10 +24,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
-      <body className={openSansFont.className + " " + poppinsFont.className}>
+    <html lang="es" className="h-full w-full overflow-x-hidden">
+      <body className={`${openSansFont.className} ${poppinsFont.className} h-full min-h-screen flex flex-col overflow-x-hidden`}>
         <NavBar />
-        {children}
+        <main className="flex-grow">{children}</main>
         <Footer />
       </body>
     </html>
