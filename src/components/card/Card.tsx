@@ -99,7 +99,7 @@ export const Card = ({ src, alt, cardTitle, cardBody, btnText, href, isEmailMode
                     {!isEmailMode && href && (
                         <button
                             onClick={() => window.open(href, "_blank")}
-                            className="w-full lg:w-auto bg-red-600 text-white font-bold px-4 py-2 rounded-md hover:bg-red-700 transition mt-4"
+                            className="w-full lg:w-auto bg-rojo text-white font-bold px-4 py-2 rounded-md hover:bg-verdes transition mt-4"
                         >
                             {btnText}
                         </button>
