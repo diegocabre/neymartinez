@@ -88,7 +88,7 @@ export const Card = ({ src, alt, cardTitle, cardBody, btnText, href, isEmailMode
                             />
                             <button
                                 onClick={handleSubmit}
-                                className="w-full bg-blue-600 text-white font-bold px-4 py-2 rounded-md hover:bg-blue-700 transition"
+                                className="w-full bg-rojo text-white font-bold px-4 py-2 rounded-md hover:bg-verdes transition"
                             >
                                 {btnText}
                             </button>
