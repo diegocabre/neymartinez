@@ -88,7 +88,7 @@ export const Card = ({ src, alt, cardTitle, cardBody, btnText, href, isEmailMode
                             />
                             <button
                                 onClick={handleSubmit}
-                                className="w-full bg-rojo text-white font-bold px-4 py-2 rounded-md hover:bg-verdes transition"
+                                className="w-full bg-amarillo text-rojo font-bold px-4 py-2 rounded-md shadow-lg border border-verdes hover:bg-rojo hover:text-amarillo transition"
                             >
                                 {btnText}
                             </button>
@@ -99,7 +99,7 @@ export const Card = ({ src, alt, cardTitle, cardBody, btnText, href, isEmailMode
                     {!isEmailMode && href && (
                         <button
                             onClick={() => window.open(href, "_blank")}
-                            className="w-full lg:w-auto bg-rojo text-white font-bold px-4 py-2 rounded-md hover:bg-verdes transition mt-4"
+                            className="w-full bg-amarillo text-rojo font-bold px-4 py-2 rounded-md shadow-lg border border-verdes hover:bg-rojo hover:text-amarillo transition"
                         >
                             {btnText}
                         </button>

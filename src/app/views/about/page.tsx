@@ -37,7 +37,7 @@ export default function AboutPage() {
           <h6 className="text-3xl md:text-5xl lg:text-6xl text-rojo italic font-serif">
             {`"Hacer que las cosas sucedan"`}
           </h6>
-          <p className="text-lg md:text-xl font-medium text-amarillo bg-verdes rounded-md p-4 shadow-md">
+          <p className="text-lg md:text-xl font-medium text-verdes">
             Muchas veces escuché a una líder decir esto mientras desarrollaba mi carrera profesional como Ingeniero Industrial en una empresa internacional en Venezuela. Durante esos 12 años aprendí a definir estrategias, trazar planes, definir metodologías para hacer seguimiento, definir indicadores, medirlos, hacer seguimiento y desafiarlos, todo alineado a un objetivo común.
             <br />
             <br />
@@ -56,7 +56,7 @@ export default function AboutPage() {
         {/* Imagen */}
         <div className="w-full lg:w-1/2 flex justify-center">
           <Image
-            src="/assets/img/ney1.jpg"
+            src="/assets/img/ney0014.jpg"
             alt="Sobre Ney Martínez"
             width={500}
             height={500}
@@ -71,7 +71,7 @@ export default function AboutPage() {
         {/* Imagen */}
         <div className="w-full lg:w-1/2 flex justify-center">
           <Image
-            src="/assets/img/ney2.jpg"
+            src="/assets/img/ney0015.jpg"
             alt="Sobre Ney Martínez"
             width={700}
             height={700}
@@ -81,7 +81,7 @@ export default function AboutPage() {
         </div>
         {/* Texto */}
         <div className="w-full lg:w-1/2 text-center lg:text-left space-y-6">
-          <p className="text-lg md:text-xl font-medium text-amarillo bg-verdes rounded-md p-4 shadow-md">
+          <p className="text-lg md:text-xl font-medium text-verdes">
             Empecé escribiendo la vida que quería construir en un lienzo de papel y post-it, definiendo todo eso que durante 12 años viví en la empresa que me formó como profesional, agregando mis aportes como Coach de Vida, Coach de Hábitos y metodologías clave como OKRs, plan estratégico y libro de vida. De allí nace mi método “RUTA AL LOGRO”.
             <br />
             <br />

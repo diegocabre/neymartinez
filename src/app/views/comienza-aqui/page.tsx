@@ -20,7 +20,7 @@ export default function ComienzaAquiPage() {
       {/* Cards en formato de grid responsivo */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-8">
         <Card
-          src="/assets/img/rutalogro.png"
+          src="/assets/img/ebook.png"
           cardTitle="E-book Ruta al Logro"
           cardBody="Descarga el E-book Ruta al Logro, ingresa tu correo para recibirlo."
           btnText="Descargar E-book"
@@ -28,7 +28,7 @@ export default function ComienzaAquiPage() {
           source="comienza-aqui"
         />
         <Card
-          src="/assets/img/ney1.jpg"
+          src="/assets/img/meta.png"
           alt="Mentoría"
           cardTitle="Mentoría personalizada"
           cardBody="Quiero la mentoría para trazar mi ruta al Logro."
@@ -37,7 +37,7 @@ export default function ComienzaAquiPage() {
           isEmailMode={false}
         />
         <Card
-          src="/assets/img/whatsappg.jpg"
+          src="/assets/img/grupo.png"
           alt="Grupo Meta en Acción"
           cardTitle="Grupo Meta en Acción"
           cardBody="Únete al grupo y comparte tu progreso."

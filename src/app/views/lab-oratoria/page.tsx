@@ -72,33 +72,16 @@ export default function LandingPage() {
       {/* Contenido principal */}
       <main className="min-h-screen overflow-hidden bg-amarillo">
         <section className="items-center mb-10 lg:mb-40 px-5 lg:px-20 animate__animated animate__fadeInDown animate__delay-1s">
-          {/* Cards en formato de grid responsivo */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-8">
-            <Card
-              src="/assets/img/desafiooratoria.png"
-              cardTitle="E-book Lab Oratoria"
-              cardBody="Descarga el E-book Lab Oratoria, ingresa tu correo para recibirlo."
-              btnText="Descargar E-book"
-              isEmailMode={true}
-              source="lab-oratoria"
-            />
-            <Card
-              src="/assets/img/ney1.jpg"
-              alt="Mentoría"
-              cardTitle="Mentoría personalizada"
-              cardBody="Quiero la mentoría para trazar mi ruta al Logro."
-              btnText="Ir a WhatsApp"
-              href="https://walink.co/82c115"
-              isEmailMode={false}
-            />
-            <Card
-              src="/assets/img/oratoria3.jpg"
-              alt="Quiero Ingresar a Lab_Oratoria"
-              cardTitle="Quiero Ingresar a Lab_Oratoria"
-              cardBody="Únete al grupo y comparte tu progreso."
-              btnText="Únete al Grupo"
-              href="https://walink.co/911fb3"
-              isEmailMode={false}
+
+          {/* Imagen grande y centrada */}
+          <div className="w-full flex justify-center mt-6 md:mt-10">
+            <Image
+              src="/assets/img/LAB2025.png"
+              alt="Lab Oratoria"
+              width={1200}
+              height={800}
+              className="object-contain w-full max-w-lg md:max-w-2xl lg:max-w-4xl h-auto"
+              priority
             />
           </div>
           {/* Primera Sección */}
@@ -370,18 +353,35 @@ export default function LandingPage() {
               autenticidad
             </p>
           </section>
-          {/* Imagen grande y centrada */}
-          <div className="w-full flex justify-center mt-6 md:mt-10">
-            <Image
-              src="/assets/img/LAB2025.png"
-              alt="Lab Oratoria"
-              width={1200}
-              height={800}
-              className="object-contain shadow-lg w-full max-w-lg md:max-w-2xl lg:max-w-4xl h-auto"
-              priority
+          {/* Cards en formato de grid responsivo */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-8">
+            <Card
+              src="/assets/img/ebook.png"
+              cardTitle="E-book Lab Oratoria"
+              cardBody="Descarga el E-book Lab Oratoria, ingresa tu correo para recibirlo."
+              btnText="Descargar E-book"
+              isEmailMode={true}
+              source="lab-oratoria"
+            />
+            <Card
+              src="/assets/img/meta.png"
+              alt="Mentoría"
+              cardTitle="Mentoría personalizada"
+              cardBody="Quiero la mentoría para trazar mi ruta al Logro."
+              btnText="Ir a WhatsApp"
+              href="https://walink.co/82c115"
+              isEmailMode={false}
+            />
+            <Card
+              src="/assets/img/equipo.png"
+              alt="Quiero Ingresar a Lab_Oratoria"
+              cardTitle="Quiero Ingresar a Lab_Oratoria"
+              cardBody="Únete al grupo y comparte tu progreso."
+              btnText="Únete al Grupo"
+              href="https://walink.co/911fb3"
+              isEmailMode={false}
             />
           </div>
-
         </section>
 
       </main>
