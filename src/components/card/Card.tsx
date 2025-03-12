@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-//import Link from "next/link";
 import { IoCheckmarkCircle, IoCloseCircle } from "react-icons/io5";
 
 interface Props {
@@ -56,23 +55,23 @@ export const Card = ({ src, alt, cardTitle, cardBody, btnText, href, isEmailMode
     return (
         <div className="relative h-full">
             {/* Tarjeta principal */}
-            <div className="flex flex-col lg:flex-row bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-3xl mx-auto p-4 h-full min-h-[300px]">
-                {/* Imagen */}
+            <div className="flex flex-col sm:flex-row bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-3xl mx-auto p-4 h-full min-h-[300px]">
+                {/* Imagen - Se hace más pequeña en sm */}
                 {src && (
-                    <figure className="w-full lg:w-1/3 h-full flex justify-center items-center">
+                    <figure className="w-full sm:w-1/4 lg:w-1/3 h-auto flex justify-center items-center">
                         <Image
                             src={src}
                             alt={alt || "Imagen"}
                             width={300}
                             height={300}
-                            className="w-full h-auto object-cover rounded-md"
+                            className="w-24 sm:w-full h-auto object-cover rounded-md"
                             priority
                         />
                     </figure>
                 )}
 
                 {/* Contenido de la Tarjeta */}
-                <div className="flex flex-col justify-between w-full lg:w-2/3 p-4 h-full">
+                <div className="flex flex-col justify-between w-full sm:w-3/4 lg:w-2/3 p-4 h-full">
                     <h2 className="text-lg lg:text-xl font-semibold text-gray-800">{cardTitle}</h2>
                     <p className="text-sm lg:text-base text-gray-600 flex-grow">{cardBody}</p>
 
@@ -129,3 +128,4 @@ export const Card = ({ src, alt, cardTitle, cardBody, btnText, href, isEmailMode
         </div>
     );
 };
+
