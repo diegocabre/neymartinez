@@ -12,9 +12,50 @@ export default function ComienzaAquiPage() {
           alt="Comienza Aquí"
           width={1200}
           height={800}
-          className="object-contain shadow-lg w-full max-w-lg md:max-w-2xl lg:max-w-4xl h-auto"
+          className="object-contain w-full max-w-lg md:max-w-2xl lg:max-w-4xl h-auto"
           priority
         />
+      </div>
+
+      {/* Section 1: Mensaje principal */}
+      <div className="flex flex-col items-center justify-center mt-6 md:mt-10 text-amarillo py-8 px-6 md:px-12 lg:px-16 rounded-lg shadow-md max-w-4xl">
+
+        {/* Título */}
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">
+          Tienes Sueños, objetivos, metas, pero...
+        </h2>
+
+        {/* Lista con iconos de flechas */}
+        <ul className="mt-4 space-y-2 text-lg md:text-xl lg:text-2xl max-w-3xl">
+          <li className="flex items-center gap-2">
+            <span className="text-red-500">➤</span> No tienes claro cómo avanzar para alcanzarlos
+          </li>
+          <li className="flex items-center gap-2">
+            <span className="text-red-500">➤</span> Te cuesta priorizar
+          </li>
+          <li className="flex items-center gap-2">
+            <span className="text-red-500">➤</span> Procrastinas tus acciones
+          </li>
+          <li className="flex items-center gap-2">
+            <span className="text-red-500">➤</span> No defines fechas para hacer lo que tienes que hacer
+          </li>
+          <li className="flex items-center gap-2">
+            <span className="text-red-500">➤</span> No sabes cómo medir avances
+          </li>
+        </ul>
+
+        {/* Segunda parte del mensaje */}
+        <h2 className="mt-6 text-2xl md:text-3xl lg:text-4xl font-bold text-center">
+          Y terminas cada año repitiendo la misma
+          <span className="italic text-amarillo"> "lista de intenciones" </span>
+          a la que llamas <span className="font-extrabold">"mis metas del año"</span>...
+        </h2>
+
+        {/* Última frase motivacional */}
+        <h2 className="mt-6 text-2xl md:text-3xl lg:text-4xl font-bold text-center">
+          Quizás solo te falta trazar la <span className="text-amarillo">RUTA</span> para
+          <span className="text-amarillo"> LOGRARLAS</span>
+        </h2>
       </div>
 
       {/* Cards en formato de grid responsivo */}
