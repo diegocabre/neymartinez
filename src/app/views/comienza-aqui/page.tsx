@@ -47,8 +47,8 @@ export default function ComienzaAquiPage() {
         {/* Segunda parte del mensaje */}
         <h2 className="mt-6 text-2xl md:text-3xl lg:text-4xl font-bold text-center">
           Y terminas cada año repitiendo la misma
-          <span className="italic text-amarillo"> "lista de intenciones" </span>
-          a la que llamas <span className="font-extrabold">"mis metas del año"</span>...
+          <span className="italic text-amarillo"> &quot;lista de intenciones&quot; </span>
+          a la que llamas <span className="font-extrabold">&quot;mis metas del año&quot;</span>...
         </h2>
 
         {/* Última frase motivacional */}
