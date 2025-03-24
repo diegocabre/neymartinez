@@ -38,7 +38,9 @@ export const NavBar = () => {
             <div className="flex items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 relative">
 
                 {/* Logo */}
-                <Logo />
+                <div className="flex items-center justify-start">
+                    <Logo />
+                </div>
 
                 {/* Botón hamburguesa */}
                 <button className="sm:hidden text-3xl" onClick={toggleMenu}>

@@ -6,12 +6,19 @@ export const Logo = () => {
             <Image
                 src="/assets/img/logo.png"
                 alt="Logo de Ney Martínez"
-                width={180}  // Tamaño base 
-                height={60}   // Ajuste de altura
+                width={300}
+                height={180}
+                quality={100}
                 priority
-                className="transition-all duration-300 w-[150px] sm:w-[180px] md:w-[200px] lg:w-[220px] xl:w-[240px] h-auto"
+                sizes="(max-width: 640px) 150px, 
+                       (max-width: 768px) 180px, 
+                       (max-width: 1024px) 200px, 
+                       (max-width: 1280px) 300px, 
+                       400px"
+                className="w-[150px] sm:w-[180px] md:w-[200px] lg:w-[300px] xl:w-[400px] h-auto"
             />
         </div>
     );
 };
+
 

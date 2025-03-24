@@ -19,13 +19,13 @@ export default function AboutPage() {
         {/* Texto */}
         <div className="w-full lg:w-1/2 text-center lg:text-left space-y-6">
           <p className="text-lg md:text-xl font-medium text-verdes">
-            Soy Ingeniero Industrial, cuadrada y cuantitativa, “una hoja de Excel con patas”; creo firmemente que todo es medible, de forma cuantitativa y cualitativa. “Lo que no se mide, no se mejora”.
+            Soy Ingeniero Industrial, cuadrada y cuantitativa, “una hoja de excel con patas”; creo firmemente que todo es medible, de forma cuantitativa y cualitativa. “Lo que no se mide, no se mejora”.
             <br />
             <br />
-            A mis 31 años pasaba esa crisis existencial en la que me preguntaba ¿Cómo y dónde quería estar en 10 años? ¿Cuál era mi propósito de vida?... ¿Te lo has preguntado? Buscando respuestas decidí estudiar coaching y empecé a formarme como Coach Organizacional, Coach Ejecutivo, Coach de hábitos y Coach de vida. En los siguientes 4 años no paré de estudiar, y al intentar ejercer me di cuenta de que una sesión de coaching no se puede plasmar en una hoja de Excel, así que decidí abrir un “Word”, una hoja en blanco con la cual acompaño a las organizaciones y a las personas a plasmar sus metas y la ruta para alcanzarlas.
+            A mis 31 años pasaba esa crisis existencial en la que me preguntaba ¿Cómo y dónde quería estar en 10 años? ¿Cuál era mi propósito de vida?... ¿Te lo has preguntado? Buscando respuestas decidí estudiar coaching y empecé a formarme como Coach Organizacional, Coach Ejecutivo, Coach de hábitos y Coach de vida. En los siguientes 4 años no paré de estudiar y al intentar ejercer me di cuenta de que una sesión de coaching no se puede plasmar en una hoja de Excel, así que decidí abrir un “Word”, una hoja en blanco con la cual acompaño a las organizaciones y a las personas a plasmar sus metas y la ruta para alcanzarlas.
             <br />
             <br />
-            En 2018 me uní a un equipo para formarme en oratoria y, a través de programas personalizados, acompañar a otros a desarrollar su habilidad. Como mentora y coach de oratoria, al igual que un PowerPoint, acompaño a las personas a darle animación, color y transición a su comunicación.
+            En 2018 me uní a un equipo para formarme en oratoria y a través de programas personalizados, acompañar a otros a desarrollar su habilidad. Como mentora y coach de oratoria, al igual que un PowerPoint, acompaño a las personas a darle animación, color y transición a su comunicación.
           </p>
         </div>
       </section>
