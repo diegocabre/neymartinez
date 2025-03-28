@@ -34,7 +34,7 @@ export const NavBar = () => {
     }, [pathname]);
 
     return (
-        <div className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? "bg-amarillo/90 backdrop-blur-md shadow-md" : "bg-amarillo"}`}>
+        <div className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? "bg-amarillo/90 backdrop-blur-md shadow-lg" : "bg-amarillo"}`}>
             <div className="flex items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 relative">
 
                 {/* Logo */}

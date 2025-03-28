@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="h-full w-full overflow-x-hidden">
-      <body className={`${openSansFont.className} ${poppinsFont.className} h-full min-h-screen flex flex-col overflow-x-hidden`}>
+      <body className={`cursor-personalizado ${openSansFont.className} ${poppinsFont.className} h-full min-h-screen flex flex-col overflow-x-hidden`}>
         <NavBar />
         <main className="flex-grow">{children}</main>
         <Footer />
