@@ -359,8 +359,9 @@ export default function LandingPage() {
               src="/assets/img/ebook.png"
               cardTitle="E-book Lab Oratoria"
               cardBody="Descarga el E-book Lab Oratoria, ingresa tu correo para recibirlo."
-              btnText="Descargar E-book"
-              isEmailMode={true}
+              btnText="Quiero mi E-Book"
+              href="https://www.oratoriavip.com/ebook"
+              isEmailMode={false}
               source="lab-oratoria"
             />
             <Card

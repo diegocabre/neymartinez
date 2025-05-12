@@ -64,8 +64,9 @@ export default function ComienzaAquiPage() {
           src="/assets/img/ebook.png"
           cardTitle="E-book Ruta al Logro"
           cardBody="Descarga el E-book Ruta al Logro, ingresa tu correo para recibirlo."
-          btnText="Descargar E-book"
-          isEmailMode={true}
+          btnText="Quiero mi E-Book"
+          href="https://www.oratoriavip.com/ebook-metas"
+          isEmailMode={false}
           source="comienza-aqui"
         />
         <Card
