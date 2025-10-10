@@ -61,33 +61,25 @@ export default function HomePage() {
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
-        // Ajustamos el fondo a un gris claro consistente con las imágenes de referencia
-        className="flex flex-col lg:flex-row items-center justify-between min-h-screen bg-neutral-100 px-6 lg:px-20 py-10 relative"
+        className="flex flex-col lg:flex-row items-center justify-between min-h-screen bg-amarillo px-6 lg:px-20 py-10 relative"
       >
         {/* Contenedor de IMÁGENES: El secreto está en el tamaño del contenedor y el apilamiento (Z-index) */}
         <div className="relative flex justify-center w-full lg:w-1/2 mb-6 lg:mb-0 z-10 p-4">
           {" "}
-          <Image
-            src="/assets/img/flechan.png"
-            alt="Elemento decorativo de flecha"
-            width={800}
-            height={800}
-            className="absolute object-contain w-[120%] h-[120%] top-50 left-0 transform -translate-x-1/4 -translate-y-1/4 z-0"
-          />
           {/* IMAGEN PRINCIPAL (Ney Martínez) - AL FRENTE */}
           <Image
-            src="/assets/img/portada.png"
+            src="/assets/img/portada2.png"
             alt="Ney Martínez, experta en Ruta al Logro"
             width={600}
             height={600}
-            // Usamos z-10 para asegurar que esté al frente de la flecha
-            className="relative object-contain shadow-lg max-w-[90%] sm:max-w-[70%] md:max-w-[60%] lg:max-w-full rounded-lg z-10"
+            quality={100}
+            className="relative object-contain max-w-[90%] sm:max-w-[70%] md:max-w-[60%] lg:max-w-full z-10"
             priority
           />
         </div>
 
         {/* Contenido de Texto (Se mantiene el estilo oscuro como en las referencias) */}
-        <div className="relative w-full lg:w-1/2 text-center lg:text-left space-y-4 z-10 lg:pl-10">
+        <div className="relative w-full lg:w-1/2 text-center lg:text-left space-y-4 z-10 lg:pl-10 ">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-rojo">
             RUTA AL LOGRO
           </h1>

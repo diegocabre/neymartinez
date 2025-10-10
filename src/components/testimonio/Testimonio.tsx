@@ -72,8 +72,9 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       <Image
         src={photoUrl}
         alt={`Foto de ${name}`}
-        width={64} // 16 * 4 = 64px, coincidiendo con el w-16 h-16
-        height={64}
+        width={100} // 16 * 4 = 64px, coincidiendo con el w-16 h-16
+        height={100}
+        quality={100}
         className="object-cover w-full h-full"
       />
     </div>
