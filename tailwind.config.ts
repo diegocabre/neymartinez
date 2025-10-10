@@ -1,14 +1,12 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  // 1. Simplificación de rutas de contenido (más limpio y legible)
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
       colors: {
+        // Mantenemos TUS nombres y TUS valores hexadecimales:
         verdes: "#33453C",
         rojo: "#FE6020",
         amarillo: "#ECE8DF",
@@ -16,30 +14,24 @@ const config: Config = {
         letras: "#CCAC8E",
       },
       backgroundImage: {
-        "gradient-custom": "linear-gradient(135deg, #0F2613 50%, #33453C 100%)",
-        "gradient-custom2":
+        "gradient-dark-primary":
+          "linear-gradient(135deg, #0F2613 50%, #33453C 100%)",
+        "gradient-light-primary":
           "linear-gradient(135deg, #ECE8DF 35%, #33453C 100%)",
-        "gradient-custom3":
+        "gradient-primary-solid":
           "linear-gradient(135deg, #33453C 50%, #33453C 100%)",
       },
       fontFamily: {
+        sans: ["var(--font-sans)", "sans-serif"],
+        heading: ["var(--font-poppins)", "sans-serif"],
+        // Mantenemos fuentes locales
         magent: ["Magent", "sans-serif"],
         hagia: ["Hagia Sugnatur", "cursive"],
       },
-      keyframes: {
-        moveCircle: {
-          "0%": { opacity: "0.3", transform: "translateX(100px)" },
-          "100%": { opacity: "0.8", transform: "translateX(0)" },
-        },
-      },
-      animation: {
-        moveCircle: "moveCircle 1.5s ease-out forwards",
-      },
     },
   },
-  plugins: [
-    require("daisyui"),
-  ],
+
+  plugins: [],
 };
 
 export default config;
