@@ -13,7 +13,7 @@ const openSansFont = Open_Sans({
 });
 
 // 3. (Opcional) Exportar la fuente secundaria como variable para Tailwind
-export const poppinsFont = Poppins({
+const poppinsFont = Poppins({
   weight: ["400", "600", "800"],
   subsets: ["latin"],
   variable: "--font-poppins",
@@ -21,7 +21,41 @@ export const poppinsFont = Poppins({
 
 export const metadata: Metadata = {
   title: "Neydemar Martinez - Oratoria",
-  description: "Oratoria",
+  description:
+    "Descubre cómo puedo ayudarte a alcanzar tus metas y comunicar con autenticidad.",
+  metadataBase: new URL("https://neymartinez.com"),
+  keywords: [
+    "Oratoria",
+    "Neydemar Martinez",
+    "Comunicación",
+    "Liderazgo",
+    "Coaching",
+    "Podcast",
+  ],
+  authors: [{ name: "Neydemar Martinez" }],
+  openGraph: {
+    title: "Neydemar Martinez - Oratoria",
+    description:
+      "Descubre cómo puedo ayudarte a alcanzar tus metas y comunicar con autenticidad.",
+    url: "https://neymartinez.com",
+    siteName: "Neydemar Martinez",
+    images: [
+      {
+        url: "/assets/img/portada2.png",
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: "es_ES",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Neydemar Martinez - Oratoria",
+    description:
+      "Descubre cómo puedo ayudarte a alcanzar tus metas y comunicar con autenticidad.",
+    images: ["/assets/img/portada2.png"],
+  },
 };
 
 export default function RootLayout({

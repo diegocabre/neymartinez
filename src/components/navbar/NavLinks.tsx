@@ -14,7 +14,7 @@ const NAV_LINKS: NavLinkItem[] = [
   { href: "/views/home", label: "Home" },
   { href: "/views/comienza-aqui", label: "Comienza aquí" },
   {
-    href: "https://link.chtbl.com/Oratoria_VIP",
+    href: "https://podfollow.com/1625944692",
     label: "Podcast",
     external: true,
   },
